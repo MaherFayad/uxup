@@ -1,3 +1,12 @@
+// styles/global.scss
+
+@import "~bootstrap/scss/bootstrap"; // Import Bootstrap SCSS here
+
+// Your custom SCSS styles can go below
+body {
+  background-color: #f8f9fa;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
