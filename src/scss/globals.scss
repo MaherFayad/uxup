@@ -1,6 +1,11 @@
 // styles/global.scss
 
 @import "~bootstrap/scss/bootstrap"; // Import Bootstrap SCSS here
+@import 'tokens/Colors';
+@import 'tokens/Fonts';
+@import 'tokens/FontSizes';
+@import 'tokens/Effects';
+
 
 // Your custom SCSS styles can go below
 body {
