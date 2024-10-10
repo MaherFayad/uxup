@@ -1,0 +1,42 @@
+.copyright-2025-uxux {
+    position: relative;
+    line-height: 16px; /* You can create a variable if used frequently */
+  }
+  
+  .footer-element-copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4px 0px;
+  }
+  
+  .social-ig {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .footer-element-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px; 
+  }
+  
+  .footer-component-sign-line {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: $font-size-caption-desktop; 
+    color: $neutral-100; 
+    font-family: $font-paragraph;
+  }
+  
