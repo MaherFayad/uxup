@@ -16,10 +16,27 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
   return (
     <>
       <Head>
-        <title>{title} | UXUP - Redefining Digital Experiences</title>
-        <meta name="description" content={description} />
+        <title>{title} | UXUP </title>
+        <meta name="description" content={description}/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#141212" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://www.uxup.com" />
+
+        {/* Open Graph (OG) Meta Tags for Social Media Sharing */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content="https://www.uxup.sa" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+
+        {/* Robots Meta Tag */}
+        <meta name="robots" content="index, follow" />
+
         <meta name="application-name" content="UXUP" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
