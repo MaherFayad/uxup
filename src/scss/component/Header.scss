@@ -69,6 +69,7 @@
   align-items: center;
   justify-content: flex-start;
   /* Align logo content to the left */
+  transition: 0.4s ease-out;
   &.scrolled{
     height: 24px;
   }
