@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.uxup.com" />
+        <link rel="canonical" href="https://www.uxup.sa" />
 
         {/* Open Graph (OG) Meta Tags for Social Media Sharing */}
         <meta property="og:type" content="website" />

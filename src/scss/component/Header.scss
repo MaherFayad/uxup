@@ -1,6 +1,7 @@
 .Navcontainer {
   /* Full width minus left and right margins */
   width: calc(100vw - 32px);
+  height: fit-content;
   position: fixed;
   /* Sticks the navigation to the top of the viewport */
   top: 0;
@@ -26,7 +27,6 @@
   /* Bottom border using text color */
   box-sizing: border-box;
   /* Ensures padding is included in width/height */
-  height: 72px;
   overflow: hidden;
   /* Prevents content from overflowing */
   flex-shrink: 0;
@@ -34,7 +34,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 32px;
+  padding: 16px 32px;
   /* Left and right padding */
   margin-top: 24px;
   /* 16px left/right margin and 24px top margin */
@@ -46,6 +46,11 @@
   font-size: $font-size-paragraph;
   font-family: $font-paragraph;
   color: $text-100;
+  transition: 0.4s ease-out;
+
+  &.scrolled{
+    padding: 8px 24px;
+  }
 }
 
 .Navcontent {
@@ -64,6 +69,9 @@
   align-items: center;
   justify-content: flex-start;
   /* Align logo content to the left */
+  &.scrolled{
+    height: 24px;
+  }
 }
 
 .Nav-column {
@@ -92,6 +100,7 @@
 .Nav-Link {
   position: relative;
   font-size: 16px;
+  font-weight: 600;
   /* Base font size */
   line-height: 150%;
   /* Ensures good readability */

@@ -48,13 +48,22 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       const nav = document.querySelector('.Navcontainer');
       const button = document.querySelector('.button');
-      
+      const icon = document.querySelector('.nav-logo');
+
       if (nav && button) {
         // Check if the navbar is scrolled
         if (window.scrollY > nav.clientHeight) {
           button.classList.add('primary'); // Add 'primary' state
+          nav.classList.add('scrolled'); // Add 'scrolled' state
+          if (icon) {
+            icon.classList.add('scrolled'); // Add 'scrolled' state only if icon exists
+          }
         } else {
           button.classList.remove('primary'); // Remove 'primary' state
+          nav.classList.remove('scrolled'); // Remove 'scrolled' state
+          if (icon) {
+            icon.classList.remove('scrolled'); // Remove 'scrolled' state only if icon exists
+          }
         }
       }
     };
@@ -76,7 +85,7 @@ const Header: React.FC = () => {
           <div className="logo">
             <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
           </div>
-          
+
           {/* Navigation Links */}
           <NavigationLinks
             aboutUsRef={aboutUsRef}
