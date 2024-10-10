@@ -3,6 +3,8 @@
     width: calc(100vw - 32px); 
     position: fixed; /* Sticks the navigation to the top of the viewport */
     top: 0;
+    left: 50%; /* Set it to the center horizontally */
+    transform: translateX(-50%); /* Adjust it by half its own width to center it */  
     z-index: 1000; /* Ensures the nav stays above other elements */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   
@@ -22,7 +24,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 32px; /* Left and right padding */
-    margin: 24px 16px 0; /* 16px left/right margin and 24px top margin */
+    margin-top: 24px; /* 16px left/right margin and 24px top margin */
     max-width: 640px; /* Restrict maximum width to 640px */
     text-align: left;
   
