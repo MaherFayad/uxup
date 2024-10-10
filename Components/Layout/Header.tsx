@@ -47,7 +47,7 @@ const Header: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.querySelector('.Navcontainer');
-      const button = document.querySelector('.button-sec');
+      const button = document.querySelector('.button');
       
       if (nav && button) {
         // Check if the navbar is scrolled
