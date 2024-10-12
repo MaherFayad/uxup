@@ -1,4 +1,3 @@
-// components/Layout.tsx
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -13,8 +12,8 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
   return (
     <>
-      <html lang="en" className="h-100">
-        <title>{title} | UXUP </title>
+      <Head>
+        <title>{title} | UXUP</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -37,36 +36,11 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
 
         <meta name="application-name" content="UXUP" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-196x196.png"
-          sizes="196x196"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-128x128.png"
-          sizes="128x128"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-96x96.png"
-          sizes="96x96"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-32x32.png"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-16x16.png"
-          sizes="16x16"
-        />
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="favicon-128x128.png" sizes="128x128" />
+        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -118,15 +92,13 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
           href="apple-touch-icon-152x152.png"
         />
         <link rel="manifest" href="site.webmanifest" />
+      </Head>
 
-        <body className="d-flex flex-column h-100">
-          <Header />
-          <main className="flex-shrink-0">
-            <div className="container-fulid">{children}</div>
-          </main>
-          <Footer />
-        </body>
-      </html>
+      <Header />
+      <main className="flex-shrink-0">
+        <div className="container-fluid">{children}</div>
+      </main>
+      <Footer />
     </>
   );
 };
