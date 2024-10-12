@@ -1,7 +1,35 @@
 // Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@400;700&family=PT+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
-
-
+@font-face {
+    font-family: 'Raleway';
+    src: url('/fonts/Raleway-VariableFont_wght.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    src: url('/fonts/PTSans-Regular.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    src: url('/fonts/PTSans-Bold.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/PTSans-Italic.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-style: italic;
+    src: url('/fonts/PTSans-BoldItalic.woff2') format('woff2');
+  }
+     
 // Fonts
-$font-heading: "Beiruti", "Raleway"; // Based on the mode (Arabic/English)
-$font-paragraph: "PT Sans", "PT Sans"; // Same for both Arabic and English
+$font-heading: "Raleway"; // Based on the mode (Arabic/English)
+$font-paragraph: "PT Sans"; // Same for both Arabic and English

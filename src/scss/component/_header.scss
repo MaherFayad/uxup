@@ -1,47 +1,54 @@
 .Navcontainer {
-  width: calc(100vw - 2rem); /* 32px -> 2rem */
-  
-  /* Height Fallback */
-  height: auto; /* Fallback for browsers that don't support fit-content */
-  @supports (height: fit-content) {
-    height: fit-content;
-  }
-
+  /* Full width minus left and right margins */
+  width: calc(100vw - 32px);
+  height: fit-content;
   position: fixed;
+  /* Sticks the navigation to the top of the viewport */
   top: 0;
   left: 50%;
+  /* Set it to the center horizontally */
   transform: translateX(-50%);
+  /* Adjust it by half its own width to center it */
   z-index: 1000;
-  box-shadow: 0rem 0.25rem 1.25rem rgba(0, 0, 0, 0.1); /* 4px 20px -> 0.25rem 1.25rem */
-  
-  /* Backdrop Filter Fallback */
-  background-color: rgba(36, 32, 32, 0.8); /* Fallback for no backdrop-filter support */
-  @supports (backdrop-filter: blur(0.75rem)) {
-    -webkit-backdrop-filter: blur(0.75rem); /* 12px -> 0.75rem */
-    backdrop-filter: blur(0.75rem); /* 12px -> 0.75rem */
-    background-color: rgba(36, 32, 32, 0.5); /* Reduced opacity for supported browsers */
-  }
+  /* Ensures the nav stays above other elements */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
 
-  border-radius: 11.5rem; /* 184px -> 11.5rem */
+  /* Apply blur effect to the background */
+  -webkit-backdrop-filter: blur(12px);
+  /* Safari support */
+  backdrop-filter: blur(12px);
+  /* Modern browsers */
+
+  border-radius: 184px;
+  background-color: rgba(36, 32, 32, 0.5);
+  /* Semi-transparent background */
   border-bottom: 1px solid $text-500;
+  /* Bottom border using text color */
   box-sizing: border-box;
+  /* Ensures padding is included in width/height */
   overflow: hidden;
+  /* Prevents content from overflowing */
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem; /* 16px 32px -> 1rem 2rem */
-  margin-top: 1.5rem; /* 24px -> 1.5rem */
-  max-width: 40rem; /* 640px -> 40rem */
+  padding: 16px 32px;
+  /* Left and right padding */
+  margin-top: 24px;
+  /* 16px left/right margin and 24px top margin */
+  max-width: 640px;
+  /* Restrict maximum width to 640px */
   text-align: left;
+
+  /* Font styles */
   font-size: $font-size-paragraph;
-  font-family: $font-paragraph;
   color: $text-100;
   transition: 0.4s ease-out;
 
   &.scrolled {
-    padding: 0.5rem 1.5rem; /* 8px 24px -> 0.5rem 1.5rem */
+    padding: 8px 24px;
   }
 }
 
@@ -51,43 +58,53 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* Evenly distribute nav items */
 }
 
 .nav-logo {
-  height: 1.6875rem; /* 27px -> 1.6875rem */
+  height: 27px;
+  /* Set logo height */
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  /* Align logo content to the left */
   transition: 0.4s ease-out;
 
   &.scrolled {
-    height: 1.5rem; /* 24px -> 1.5rem */
+    height: 24px;
   }
 }
 
 .Nav-column {
   overflow: hidden;
+  /* Hide content overflow */
   flex-shrink: 0;
+  /* Prevent column from shrinking */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 2rem; /* 32px -> 2rem */
+  /* Align items to the left */
+  gap: 32px;
+  /* Spacing between nav items */
   text-align: left;
 }
 
 /* Media query for mobile responsiveness */
-@media screen and (max-width: 45.5rem) { /* 728px -> 45.5rem */
+@media screen and (max-width: 728px) {
   .Nav-column {
     display: none;
+    /* Hide nav columns on small screens */
   }
 }
 
 .Nav-Link {
   position: relative;
-  font-size: 1rem; /* 16px -> 1rem */
+  font-size: 16px;
   font-weight: 600;
+  /* Base font size */
   line-height: 150%;
+  /* Ensures good readability */
   color: $text-100;
   text-align: left;
 }
@@ -96,20 +113,23 @@
   position: relative;
   line-height: 150%;
   white-space: nowrap;
+  /* Prevent text wrapping */
   overflow: hidden;
+  /* Hide overflow */
   text-overflow: ellipsis;
+  /* Show ellipsis for overflowing text */
 }
 
 .button-parent {
   position: relative;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
-  height: 2.5rem; /* 40px -> 2.5rem */
+  /* Adjust width to fit content */
+  height: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem; /* 16px -> 1rem */
+  gap: 16px;
+  /* Spacing between elements inside */
   text-align: left;
 }

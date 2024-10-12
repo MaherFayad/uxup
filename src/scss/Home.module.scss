@@ -26,7 +26,6 @@
 }
 
 .main ol {
-  font-family: var(--font-geist-mono);
   padding-left: 0;
   margin: 0;
   font-size: 0.875rem; /* 14px -> 0.875rem */
@@ -40,7 +39,6 @@
 }
 
 .main code {
-  font-family: inherit;
   background: var(--gray-alpha-100);
   padding: 0.125rem 0.25rem; /* 2px 4px -> 0.125rem 0.25rem */
   border-radius: 0.25rem; /* 4px -> 0.25rem */

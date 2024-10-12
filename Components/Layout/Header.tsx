@@ -1,4 +1,7 @@
-import React, { useRef, useEffect } from 'react';
+// components/Header.tsx
+"use client";
+
+import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Layer1Icon from '../../public/Logo.svg';
 
@@ -30,80 +33,77 @@ const NavigationLinks: React.FC<{
   );
 };
 
-// Header component
-const Header: React.FC = () => {
-  const aboutUsRef = useRef<HTMLDivElement | null>(null);
-  const servicesRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const contactUsRef = useRef<HTMLDivElement | null>(null);
+
+const Header: React.FC<{
+  aboutUsRef: React.RefObject<HTMLDivElement>;
+  servicesRef: React.RefObject<HTMLDivElement>;
+  projectsRef: React.RefObject<HTMLDivElement>;
+  contactUsRef: React.RefObject<HTMLDivElement>;
+}> = ({ aboutUsRef, servicesRef, projectsRef, contactUsRef }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   const handleARClick = () => {
-    console.log('AR link clicked');
     // Add AR language switch functionality here
   };
 
-  // useEffect to handle scroll event and manage button state
   useEffect(() => {
+    let prevScrollPos = document.body.scrollTop || document.documentElement.scrollTop;
+    const scrollThreshold = 0.1;
+  
     const handleScroll = () => {
-      const nav = document.querySelector('.Navcontainer');
-      const button = document.querySelector('.button');
-      const icon = document.querySelector('.nav-logo');
-
-      if (nav && button) {
-        // Check if the navbar is scrolled
-        if (window.scrollY > nav.clientHeight) {
-          button.classList.add('primary'); // Add 'primary' state
-          nav.classList.add('scrolled'); // Add 'scrolled' state
-          if (icon) {
-            icon.classList.add('scrolled'); // Add 'scrolled' state only if icon exists
-          }
-        } else {
-          button.classList.remove('primary'); // Remove 'primary' state
-          nav.classList.remove('scrolled'); // Remove 'scrolled' state
-          if (icon) {
-            icon.classList.remove('scrolled'); // Remove 'scrolled' state only if icon exists
-          }
-        }
+      const currentScrollPos = document.body.scrollTop || document.documentElement.scrollTop;
+  
+      if (currentScrollPos !== prevScrollPos) {
+        const newIsScrolled = currentScrollPos > scrollThreshold;
+        setIsScrolled(newIsScrolled);
       }
+  
+      prevScrollPos = currentScrollPos;
     };
-
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-
-    // Cleanup the event listener on component unmount
+  
+    // Add event listeners
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('touchmove', handleScroll, { passive: true });
+    window.addEventListener('wheel', handleScroll, { passive: true });
+    
+    // Cleanup
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('touchmove', handleScroll);
+      window.removeEventListener('wheel', handleScroll);
     };
-  }, []); // Empty dependency array ensures this runs only on mount and unmount
+  }, []);
+  
 
   return (
-    <>
-      {/* Header Section */}
-      <header className="Navcontainer">
-        <div className="Navcontent">
-          <div className="logo">
-            <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
-          </div>
-
-          {/* Navigation Links */}
-          <NavigationLinks
-            aboutUsRef={aboutUsRef}
-            servicesRef={servicesRef}
-            projectsRef={projectsRef}
-          />
-
-          {/* Contact Us and AR */}
-          <div className="button-parent">
-            <div className="button" onClick={() => scrollToSection(contactUsRef)}>
-              <div className="contact-us">Contact us</div>
-            </div>
-            <b className="Nav-Link" id="linkTwoText" onClick={handleARClick}>
-              AR
-            </b>
-          </div>
+    <header ref={headerRef} className={`Navcontainer ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="Navcontent">
+        <div className={`logo ${isScrolled ? 'scrolled' : ''}`}>
+          <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
         </div>
-      </header>
-    </>
+
+        {/* Navigation Links */}
+        <NavigationLinks
+          aboutUsRef={aboutUsRef}
+          servicesRef={servicesRef}
+          projectsRef={projectsRef}
+        />
+
+        {/* Contact Us and AR */}
+        <div className="button-parent">
+          <div
+            className={`button ${isScrolled ? 'primary' : ''}`}
+            onClick={() => scrollToSection(contactUsRef)}
+          >
+            <div className="contact-us">Contact us</div>
+          </div>
+          <b className="Nav-Link" id="linkTwoText" onClick={handleARClick}>
+            AR
+          </b>
+        </div>
+      </div>
+    </header>
   );
 };
 
