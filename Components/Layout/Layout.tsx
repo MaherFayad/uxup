@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,6 +10,12 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
+    // Define the refs for each section
+    const aboutUsRef = useRef<HTMLDivElement>(null);
+    const servicesRef = useRef<HTMLDivElement>(null);
+    const projectsRef = useRef<HTMLDivElement>(null);
+    const contactUsRef = useRef<HTMLDivElement>(null);
+  
   return (
     <>
       <Head>
@@ -94,7 +100,12 @@ const Layout: React.FC<LayoutProps> = ({ title, description, children }) => {
         <link rel="manifest" href="site.webmanifest" />
       </Head>
 
-      <Header />
+      <Header
+        aboutUsRef={aboutUsRef}
+        servicesRef={servicesRef}
+        projectsRef={projectsRef}
+        contactUsRef={contactUsRef}
+      />
       <main className="flex-shrink-0">
         <div className="container-fluid">{children}</div>
       </main>
