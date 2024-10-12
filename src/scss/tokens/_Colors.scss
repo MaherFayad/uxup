@@ -64,3 +64,102 @@ $warning-800: rgba(153, 79, 0, 1);
 $info-200: rgba(191, 243, 255, 1);
 $info-500: rgba(0, 178, 255, 1);
 $info-800: rgba(0, 87, 153, 1);
+
+
+// Color Classes
+.uxup-color-primary-50 { color: $primary-50; }
+.uxup-color-primary-100 { color: $primary-100; }
+.uxup-color-primary-200 { color: $primary-200; }
+.uxup-color-primary-300 { color: $primary-300; }
+.uxup-color-primary-400 { color: $primary-400; }
+.uxup-color-primary-500 { color: $primary-500; }
+.uxup-color-primary-600 { color: $primary-600; }
+.uxup-color-primary-700 { color: $primary-700; }
+.uxup-color-primary-800 { color: $primary-800; }
+.uxup-color-primary-900 { color: $primary-900; }
+.uxup-color-primary-950 { color: $primary-950; }
+
+.uxup-color-neutral-50 { color: $neutral-50; }
+.uxup-color-neutral-100 { color: $neutral-100; }
+.uxup-color-neutral-200 { color: $neutral-200; }
+.uxup-color-neutral-300 { color: $neutral-300; }
+.uxup-color-neutral-400 { color: $neutral-400; }
+.uxup-color-neutral-500 { color: $neutral-500; }
+.uxup-color-neutral-600 { color: $neutral-600; }
+.uxup-color-neutral-700 { color: $neutral-700; }
+.uxup-color-neutral-800 { color: $neutral-800; }
+.uxup-color-neutral-900 { color: $neutral-900; }
+.uxup-color-neutral-950 { color: $neutral-950; }
+
+.uxup-color-text-50 { color: $text-50; }
+.uxup-color-text-100 { color: $text-100; }
+.uxup-color-text-200 { color: $text-200; }
+.uxup-color-text-300 { color: $text-300; }
+.uxup-color-text-400 { color: $text-400; }
+.uxup-color-text-500 { color: $text-500; }
+.uxup-color-text-600 { color: $text-600; }
+.uxup-color-text-700 { color: $text-700; }
+.uxup-color-text-800 { color: $text-800; }
+.uxup-color-text-900 { color: $text-900; }
+.uxup-color-text-950 { color: $text-950; }
+
+.uxup-color-error-200 { color: $error-200; }
+.uxup-color-error-500 { color: $error-500; }
+.uxup-color-error-800 { color: $error-800; }
+
+.uxup-color-warning-200 { color: $warning-200; }
+.uxup-color-warning-500 { color: $warning-500; }
+.uxup-color-warning-800 { color: $warning-800; }
+
+.uxup-color-info-200 { color: $info-200; }
+.uxup-color-info-500 { color: $info-500; }
+.uxup-color-info-800 { color: $info-800; }
+
+// Background Classes
+.uxup-bg-primary-50 { background-color: $primary-50; }
+.uxup-bg-primary-100 { background-color: $primary-100; }
+.uxup-bg-primary-200 { background-color: $primary-200; }
+.uxup-bg-primary-300 { background-color: $primary-300; }
+.uxup-bg-primary-400 { background-color: $primary-400; }
+.uxup-bg-primary-500 { background-color: $primary-500; }
+.uxup-bg-primary-600 { background-color: $primary-600; }
+.uxup-bg-primary-700 { background-color: $primary-700; }
+.uxup-bg-primary-800 { background-color: $primary-800; }
+.uxup-bg-primary-900 { background-color: $primary-900; }
+.uxup-bg-primary-950 { background-color: $primary-950; }
+
+.uxup-bg-neutral-50 { background-color: $neutral-50; }
+.uxup-bg-neutral-100 { background-color: $neutral-100; }
+.uxup-bg-neutral-200 { background-color: $neutral-200; }
+.uxup-bg-neutral-300 { background-color: $neutral-300; }
+.uxup-bg-neutral-400 { background-color: $neutral-400; }
+.uxup-bg-neutral-500 { background-color: $neutral-500; }
+.uxup-bg-neutral-600 { background-color: $neutral-600; }
+.uxup-bg-neutral-700 { background-color: $neutral-700; }
+.uxup-bg-neutral-800 { background-color: $neutral-800; }
+.uxup-bg-neutral-900 { background-color: $neutral-900; }
+.uxup-bg-neutral-950 { background-color: $neutral-950; }
+
+.uxup-bg-text-50 { background-color: $text-50; }
+.uxup-bg-text-100 { background-color: $text-100; }
+.uxup-bg-text-200 { background-color: $text-200; }
+.uxup-bg-text-300 { background-color: $text-300; }
+.uxup-bg-text-400 { background-color: $text-400; }
+.uxup-bg-text-500 { background-color: $text-500; }
+.uxup-bg-text-600 { background-color: $text-600; }
+.uxup-bg-text-700 { background-color: $text-700; }
+.uxup-bg-text-800 { background-color: $text-800; }
+.uxup-bg-text-900 { background-color: $text-900; }
+.uxup-bg-text-950 { background-color: $text-950; }
+
+.uxup-bg-error-200 { background-color: $error-200; }
+.uxup-bg-error-500 { background-color: $error-500; }
+.uxup-bg-error-800 { background-color: $error-800; }
+
+.uxup-bg-warning-200 { background-color: $warning-200; }
+.uxup-bg-warning-500 { background-color: $warning-500; }
+.uxup-bg-warning-800 { background-color: $warning-800; }
+
+.uxup-bg-info-200 { background-color: $info-200; }
+.uxup-bg-info-500 { background-color: $info-500; }
+.uxup-bg-info-800 { background-color: $info-800; }
