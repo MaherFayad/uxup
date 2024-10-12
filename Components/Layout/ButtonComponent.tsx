@@ -129,37 +129,38 @@ const ButtonComponent: React.FC<ButtonProps> = ({
           </button>
         </div>
       )}
-      {dropDownoptions && dropDownoptions.length > 0 && !showLoading && (
-        <div ref={dropdownMenu} className="onEndDropDown" aria-labelledby="dropdown1">
-          {dropDownoptions.map((item: ButtonDropDownOptions) => (
-            <button
-              key={item.id}
-              id={item.id}
-              className="mb-2 text-start px-0"
-              disabled={item.disabled || false}
-              onClick={() => doClickMenu(item.id)}
-              aria-label={item.text} // Accessible label for screen readers
-            >
-              <div className="d-flex gap-3 color-uxup-primaryText font-body-semi-bold">
-                {item.icon && (
-                  <span
-                    className={`my-auto color-uxup-secondaryText fs-4 ${
-                      item.isDanger ? "color-uxup-negativeText" : ""
-                    }`}
-                    aria-hidden="true" // Ignored by screen readers
-                  >
-                    {item.icon}
+        {dropDownoptions && dropDownoptions.length > 0 && !showLoading && (
+          <div ref={dropdownMenu} className="onEndDropDown" aria-labelledby="dropdown1">
+            {dropDownoptions.map((item: ButtonDropDownOptions) => (
+              <div
+                key={item.id}
+                id={item.id}
+                className="mb-2 text-start px-0"
+                role="menuitem" // Instead of using button, use divs or spans
+                onClick={() => doClickMenu(item.id)}
+                aria-label={item.text}
+              >
+                <div className="d-flex gap-3 color-uxup-primaryText font-body-semi-bold">
+                  {item.icon && (
+                    <span
+                      className={`my-auto color-uxup-secondaryText fs-4 ${
+                        item.isDanger ? "color-uxup-negativeText" : ""
+                      }`}
+                      aria-hidden="true"
+                    >
+                      {item.icon}
+                    </span>
+                  )}
+                  <span className={`flex-grow-1 my-auto ${item.isDanger ? "color-uxup-negativeText" : ""}`}>
+                    {item.text}
                   </span>
-                )}
-                <span className={`flex-grow-1 my-auto ${item.isDanger ? "color-uxup-negativeText" : ""}`}>
-                  {item.text}
-                </span>
+                </div>
+                {item.hasBorder && <div className="pt-2 uxup-dropdown-divider"></div>}
               </div>
-              {item.hasBorder && <div className="pt-2 uxup-dropdown-divider"></div>}
-            </button>
-          ))}
-        </div>
-      )}
+            ))}
+          </div>
+        )}
+
     </>
   );
 };

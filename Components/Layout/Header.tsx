@@ -1,4 +1,3 @@
-// components/Header.tsx
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Layer1Icon from '../../public/Logo.svg';
@@ -43,7 +42,7 @@ const Header: React.FC = () => {
     // Add AR language switch functionality here
   };
 
-  // UseEffect to handle scroll event and manage button state
+  // useEffect to handle scroll event and manage button state
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.querySelector('.Navcontainer');
@@ -75,7 +74,7 @@ const Header: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array to ensure this runs only on mount and unmount
+  }, []); // Empty dependency array ensures this runs only on mount and unmount
 
   return (
     <>

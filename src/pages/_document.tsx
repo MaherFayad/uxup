@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import { useEffect, useState } from "react";
+import Layout from "../../Components/Layout/Layout";
 
 export default function Document() {
   const [isClient, setIsClient] = useState(false);
