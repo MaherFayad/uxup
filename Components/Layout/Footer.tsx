@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => {
   return (
-    <footer className='footer'>
+    <footer className='footer mt-auto py-3'>
       <div className='footer-component-line-navi-parent'>
         {/* Logo Section */}
         <div className='footer-component-line-navi'>

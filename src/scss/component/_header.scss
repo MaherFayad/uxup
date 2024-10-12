@@ -1,0 +1,115 @@
+.Navcontainer {
+  width: calc(100vw - 2rem); /* 32px -> 2rem */
+  
+  /* Height Fallback */
+  height: auto; /* Fallback for browsers that don't support fit-content */
+  @supports (height: fit-content) {
+    height: fit-content;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0rem 0.25rem 1.25rem rgba(0, 0, 0, 0.1); /* 4px 20px -> 0.25rem 1.25rem */
+  
+  /* Backdrop Filter Fallback */
+  background-color: rgba(36, 32, 32, 0.8); /* Fallback for no backdrop-filter support */
+  @supports (backdrop-filter: blur(0.75rem)) {
+    -webkit-backdrop-filter: blur(0.75rem); /* 12px -> 0.75rem */
+    backdrop-filter: blur(0.75rem); /* 12px -> 0.75rem */
+    background-color: rgba(36, 32, 32, 0.5); /* Reduced opacity for supported browsers */
+  }
+
+  border-radius: 11.5rem; /* 184px -> 11.5rem */
+  border-bottom: 1px solid $text-500;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem; /* 16px 32px -> 1rem 2rem */
+  margin-top: 1.5rem; /* 24px -> 1.5rem */
+  max-width: 40rem; /* 640px -> 40rem */
+  text-align: left;
+  font-size: $font-size-paragraph;
+  font-family: $font-paragraph;
+  color: $text-100;
+  transition: 0.4s ease-out;
+
+  &.scrolled {
+    padding: 0.5rem 1.5rem; /* 8px 24px -> 0.5rem 1.5rem */
+  }
+}
+
+.Navcontent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  height: 1.6875rem; /* 27px -> 1.6875rem */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.4s ease-out;
+
+  &.scrolled {
+    height: 1.5rem; /* 24px -> 1.5rem */
+  }
+}
+
+.Nav-column {
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem; /* 32px -> 2rem */
+  text-align: left;
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 45.5rem) { /* 728px -> 45.5rem */
+  .Nav-column {
+    display: none;
+  }
+}
+
+.Nav-Link {
+  position: relative;
+  font-size: 1rem; /* 16px -> 1rem */
+  font-weight: 600;
+  line-height: 150%;
+  color: $text-100;
+  text-align: left;
+}
+
+.contact-us {
+  position: relative;
+  line-height: 150%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-parent {
+  position: relative;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  height: 2.5rem; /* 40px -> 2.5rem */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* 16px -> 1rem */
+  text-align: left;
+}
