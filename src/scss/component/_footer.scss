@@ -45,7 +45,6 @@
   text-align: left;
   font-size: $font-size-caption-desktop;
   color: $neutral-100;
-  font-family: $font-paragraph;
 }
 
 .Separator {
@@ -79,7 +78,6 @@
   margin-bottom: 1.5rem; /* 24px -> 1.5rem */
   text-align: left;
   color: $neutral-100;
-  font-family: $font-paragraph;
 }
 
 @media screen and (max-width: 45.5rem) { /* 728px -> 45.5rem */

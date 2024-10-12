@@ -40,9 +40,9 @@ body {
     text-decoration: none;
   }
   body {
+    font-family: "PT Sans", sans-serif;
     color: var(--foreground);
     background: linear-gradient(45deg, var(--background), var(--foreground)); // Use custom properties
-    font-family: $font-heading, $font-paragraph;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;

@@ -2,14 +2,14 @@ import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Layer1Icon from '../../public/Logo.svg';
 
-// Helper function to handle scrolling to a specific section
+// Helper function to scroll to a specific section
 const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
   if (ref.current) {
     ref.current.scrollIntoView({ behavior: 'smooth' });
   }
 };
 
-// Navigation links with scroll functionality
+// NavigationLinks component
 const NavigationLinks: React.FC<{
   aboutUsRef: React.RefObject<HTMLDivElement>;
   servicesRef: React.RefObject<HTMLDivElement>;
@@ -32,81 +32,69 @@ const NavigationLinks: React.FC<{
 
 // Header component
 const Header: React.FC = () => {
-  const aboutUsRef = useRef<HTMLDivElement | null>(null);
-  const servicesRef = useRef<HTMLDivElement | null>(null);
-  const projectsRef = useRef<HTMLDivElement | null>(null);
-  const contactUsRef = useRef<HTMLDivElement | null>(null);
+  const navRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLDivElement | null>(null);
+  const iconRef = useRef<HTMLDivElement | null>(null);
+  const aboutUsRef = useRef<HTMLDivElement | null>(null); // Define aboutUsRef
+  const servicesRef = useRef<HTMLDivElement | null>(null); // Define servicesRef
+  const projectsRef = useRef<HTMLDivElement | null>(null); // Define projectsRef
+  const contactUsRef = useRef<HTMLDivElement | null>(null); // Define contactUsRef
 
-  const handleARClick = () => {
+  // Handle AR Click event
+  const handleARClick: React.MouseEventHandler<HTMLElement> = (event) => {
     console.log('AR link clicked');
-    // Add AR language switch functionality here
+    // Add AR language switch functionality here if needed
   };
 
-  // useEffect to handle scroll event and manage button state
   useEffect(() => {
     const handleScroll = () => {
-      const nav = document.querySelector('.Navcontainer');
-      const button = document.querySelector('.button');
-      const icon = document.querySelector('.nav-logo');
-  
-      console.log('Scroll position:', window.scrollY);
-      console.log('Nav element:', nav);
-      console.log('Button element:', button);
-      console.log('Icon element:', icon);
-  
+      const nav = navRef.current;
+      const button = buttonRef.current;
+      const icon = iconRef.current;
+
       if (nav && button) {
-        // Check if the navbar is scrolled
         if (window.scrollY > nav.clientHeight) {
-          button.classList.add('primary'); // Add 'primary' state
-          nav.classList.add('scrolled'); // Add 'scrolled' state
-          icon?.classList.add('scrolled'); // Add 'scrolled' state only if icon exists
-          console.log('Added scrolled state');
+          button.classList.add('primary');
+          nav.classList.add('scrolled');
+          icon?.classList.add('scrolled');
         } else {
-          button.classList.remove('primary'); // Remove 'primary' state
-          nav.classList.remove('scrolled'); // Remove 'scrolled' state
-          icon?.classList.remove('scrolled'); // Remove 'scrolled' state only if icon exists
-          console.log('Removed scrolled state');
+          button.classList.remove('primary');
+          nav.classList.remove('scrolled');
+          icon?.classList.remove('scrolled');
         }
       }
     };
-    
-    // Attach the scroll event listener
+
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array ensures this runs only on mount and unmount
+  }, []);
 
   return (
-    <>
-      {/* Header Section */}
-      <header className="Navcontainer">
-        <div className="Navcontent">
-          <div className="logo">
-            <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
-          </div>
-
-          {/* Navigation Links */}
-          <NavigationLinks
-            aboutUsRef={aboutUsRef}
-            servicesRef={servicesRef}
-            projectsRef={projectsRef}
-          />
-
-          {/* Contact Us and AR */}
-          <div className="button-parent">
-            <div className="button" onClick={() => scrollToSection(contactUsRef)}>
-              <div className="contact-us">Contact us</div>
-            </div>
-            <b className="Nav-Link" id="linkTwoText" onClick={handleARClick}>
-              AR
-            </b>
-          </div>
+    <header className="Navcontainer" ref={navRef}>
+      <div className="Navcontent">
+        <div className="logo" ref={iconRef}>
+          <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
         </div>
-      </header>
-    </>
+
+        <NavigationLinks
+          aboutUsRef={aboutUsRef}
+          servicesRef={servicesRef}
+          projectsRef={projectsRef}
+        />
+
+        <div className="button-parent">
+          <div className="button" ref={buttonRef} onClick={() => scrollToSection(contactUsRef)}>
+            <div className="contact-us">Contact us</div>
+          </div>
+          <b className="Nav-Link" id="linkTwoText" onClick={handleARClick}>
+            AR
+          </b>
+        </div>
+      </div>
+    </header>
   );
 };
 
