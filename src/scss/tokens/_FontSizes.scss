@@ -35,6 +35,7 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 .uxup-fs-h1{
     font-family: $font-heading;
     font-size: $font-size-h1-desktop;
+    line-height: 1;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-h1-tablet;
     }
@@ -46,6 +47,7 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 .uxup-fs-h2{
     font-family: $font-heading;
     font-size: $font-size-h2-desktop;
+    line-height: 1;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-h2-tablet;
     }
@@ -56,6 +58,7 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 // H3
 .uxup-fs-h3{
     font-family: $font-heading;
+    line-height: 1;
     font-size: $font-size-h3-desktop;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-h3-tablet;
@@ -67,6 +70,7 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 // H4
 .uxup-fs-h4{
     font-family: $font-heading;
+    line-height: 1;
     font-size: $font-size-h4-desktop;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-h4-tablet;
@@ -79,6 +83,7 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 .uxup-fs-display-large{
     font-family: $font-paragraph;
     font-size: $font-size-display-large-desktop;
+    line-height: 1.25;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-display-large-tablet;
     }
@@ -91,6 +96,7 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 .uxup-fs-paragraph-large{
     font-family: $font-paragraph;
     font-size: $font-size-paragraph-large-desktop;
+    line-height: 1.5;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-paragraph-large-tablet;
     }
@@ -102,12 +108,14 @@ $font-size-caption-mobile: 0.75rem; /* 12px -> 0.75rem */
 .uxup-fs-paragraph { 
     font-family: $font-paragraph;
     font-size: $font-size-paragraph; 
+    line-height: 1.5;
 }
 
 // Caption
 .uxup-fs-caption-large{
     font-family: $font-paragraph;
     font-size: $font-size-caption-desktop;
+    line-height: 1.5;
     @media screen and (max-width: 64rem) { /* 1024px -> 64rem */
         font-size: $font-size-caption-tablet;
     }
