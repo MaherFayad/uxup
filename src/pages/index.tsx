@@ -1,13 +1,12 @@
-// pages/index.tsx
-import Layout from "../../Components/Layout/Layout";
-import HeroBanner from '../../Components/Layout/HeroBanner'; // Corrected the import path
-
+import Layout from '../../Components/Layout/Layout';
+import HeroBanner from '../../Components/Layout/HeroBanner';
+import DigitalFutureComponent from '../../Components/Layout/DigitalFutureComponent';
 
 export default function Home() {
-
   return (
-      <Layout title="Home" description="Redefining Digital Experiences">
-        <HeroBanner />
-      </Layout>
+    <Layout title="Home" description="Redefining Digital Experiences">
+      <HeroBanner />
+      <DigitalFutureComponent />
+    </Layout>
   );
 }
