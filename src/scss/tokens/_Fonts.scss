@@ -1,56 +1,78 @@
 // Import Google Fonts
 @font-face {
-  font-family: 'Raleway';
-  font-weight: 400;
-  src: url('/fonts/Raleway-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 500;
-  src: url('/fonts/Raleway-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 600;
-  src: url('/fonts/Raleway-SemiBold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 700;
-  src: url('/fonts/Raleway-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Raleway';
-  font-weight: 800;
-  src: url('/fonts/Raleway-Black.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-weight: 400;
-  src: url('/fonts/PTSans-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-weight: 700;
-  src: url('/fonts/PTSans-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-weight: 400;
-  font-style: italic;
-  src: url('/fonts/PTSans-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'PT Sans';
-  font-weight: 700;
-  font-style: italic;
-  src: url('/fonts/PTSans-BoldItalic.woff2') format('woff2');
-}
-   
-// Fonts
-$font-heading: "Raleway"; // Based on the mode (Arabic/English)
-$font-paragraph: "PT Sans"; // Same for both Arabic and English
+    font-family: 'Raleway';
+    font-weight: 400;
+    src: url('/fonts/Raleway-Regular.woff2') format('woff2'),
+         url('/fonts/Raleway-Regular.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 500;
+    src: url('/fonts/Raleway-Medium.woff2') format('woff2'),
+         url('/fonts/Raleway-Medium.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 600;
+    src: url('/fonts/Raleway-SemiBold.woff2') format('woff2'),
+         url('/fonts/Raleway-SemiBold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 700;
+    src: url('/fonts/Raleway-Bold.woff2') format('woff2'),
+         url('/fonts/Raleway-Bold.woff') format('woff');
+  }
+  @font-face {
+    font-family: 'Raleway';
+    font-weight: 800;
+    src: url('/fonts/Raleway-Black.woff2') format('woff2'),
+         url('/fonts/Raleway-Black.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    src: url('/fonts/PTSans-Regular.woff2') format('woff2'),
+         url('/fonts/PTSans-Regular.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    src: url('/fonts/PTSans-Bold.woff2') format('woff2'),
+         url('/fonts/PTSans-Bold.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/PTSans-Italic.woff2') format('woff2'),
+         url('/fonts/PTSans-Italic.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'PT Sans';
+    font-weight: 700;
+    font-style: italic;
+    src: url('/fonts/PTSans-BoldItalic.woff2') format('woff2'),
+         url('/fonts/PTSans-BoldItalic.woff') format('woff');
+  }
+  
+  // Fonts Variables
+  $font-heading: 'Raleway', sans-serif;
+  $font-paragraph: 'PT Sans', sans-serif;
+  
+  // Apply the fonts to headings and paragraphs
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    font-weight: 600; // Raleway SemiBold
+  }
+  
+  p, span, div {
+    font-family: $font-paragraph;
+    font-weight: 400; // PT Sans Regular
+  }
+  

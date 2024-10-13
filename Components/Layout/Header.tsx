@@ -19,7 +19,7 @@ const NavigationLinks: React.FC<{
   projectsRef: React.RefObject<HTMLDivElement>;
 }> = ({ aboutUsRef, servicesRef, projectsRef }) => {
   return (
-    <div className="Nav-column">
+    <div className="Nav-column uxup-fs-paragraph">
       <b className="Nav-Link" onClick={() => scrollToSection(aboutUsRef)}>
         About us
       </b>
@@ -78,7 +78,7 @@ const Header: React.FC<{
 
   return (
     <header ref={headerRef} className={`Navcontainer ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="Navcontent">
+      <div className="Navcontent uxup-fs-paragraph">
         <div className={`logo ${isScrolled ? 'scrolled' : ''}`}>
           <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
         </div>
@@ -91,7 +91,7 @@ const Header: React.FC<{
         />
 
         {/* Contact Us and AR */}
-        <div className="button-parent">
+        <div className="button-parent uxup-fs-paragraph">
           <div
             className={`button ${isScrolled ? 'primary' : ''}`}
             onClick={() => scrollToSection(contactUsRef)}
