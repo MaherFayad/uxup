@@ -3,12 +3,13 @@
   padding: 1.5rem;
   background-color: $neutral-800;
   background-repeat: no-repeat;
-  background-size: cover;
-  border: .1rem solid $neutral-700;
+  background-size: auto;
+  background-position: bottom right;
+  border: 0.1rem solid $neutral-700;
   color: $neutral-100;
   min-height: 28.438rem;
-  box-shadow: 0rem .1rem .5rem 0rem var(--shadow-weak, rgba(0, 0, 0, 0.10));
-  
+  box-shadow: 0rem 0.1rem 0.5rem 0rem var(--shadow-weak, rgba(0, 0, 0, 0.1));
+
   h1 {
     font-size: $font-size-display-large-tablet;
     font-weight: bold;
@@ -18,60 +19,127 @@
   }
 }
 .uxup-1 {
-    background-image: url(../../../public/designInspiration/uxup-card-1.svg);
+  background-image: url(../../../public/designInspiration/uxup-card-1.svg);
+  p {
+    font-size: 1.125rem;
+    min-width: 16rem;
+    max-width: min-content;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+  }
 }
 .uxup-2 {
-    background-image: url(../../../public/designInspiration/uxup-card-2.svg);
-    --r: 2rem;  /* control the rounded part */
-    --s: 12rem;  /* control the size of the cut */
-    --a: 10deg; /* control the depth of the curvature */
-  
-    aspect-ratio: 0;
-    border-radius: var(--r);
-    --_m:100%/calc(2*var(--r)) var(--r) no-repeat
-      radial-gradient(50% 100% at top,#000 calc(100% - 1px),#0000);
-    --_d:(var(--s) + var(--r))*cos(var(--a));
-    mask:
-      calc(50% + var(--_d)) var(--_m),calc(50% - var(--_d)) var(--_m),
-      radial-gradient(var(--s) at 50% calc(100% + sin(var(--a))*var(--s)),
-        #0000 100%,#000 calc(100% + 1px)) 0 calc(var(--r)*(sin(var(--a)) - 1)) no-repeat,
-      linear-gradient(90deg,#000 calc(50% - var(--_d)),#0000 0 calc(50% + var(--_d)),#000 0);
+  background-image: url(../../../public/designInspiration/uxup-card-2.svg);
+  --r: 1rem; /* control the rounded part */
+  --s: 12rem; /* control the size of the cut */
+  --a: 10deg; /* control the depth of the curvature */
+  background-position: bottom center;
+
+  aspect-ratio: 0;
+  border-radius: var(--r);
+  --_m: 100% / calc(2 * var(--r)) var(--r) no-repeat
+    radial-gradient(50% 100% at top, #000 calc(100% - 1px), #0000);
+  --_d: (var(--s) + var(--r)) * cos(var(--a));
+  mask: calc(50% + var(--_d)) var(--_m), calc(50% - var(--_d)) var(--_m),
+    radial-gradient(
+        var(--s) at 50% calc(100% + sin(var(--a)) * var(--s)),
+        #0000 100%,
+        #000 calc(100% + 1px)
+      )
+      0 calc(var(--r) * (sin(var(--a)) - 1)) no-repeat,
+    linear-gradient(
+      90deg,
+      #000 calc(50% - var(--_d)),
+      #0000 0 calc(50% + var(--_d)),
+      #000 0
+    );
 }
 .uxup-3 {
-    background-image: url(../../../public/designInspiration/uxup-card-3.svg);
+  background-image: url(../../../public/designInspiration/uxup-card-3.svg);
+  background-position: bottom left;
+  text-align: right;
+  p {
+    font-size: 1.125rem;
+    min-width: 16rem;
+    max-width: min-content;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+  }
 }
 .uxup-4 {
-    background-image: url(../../../public/designInspiration/uxup-card-4.svg);
-    --r: 2rem; /* the radius */
-    --s: 9rem; /* the size of the corner*/
-    
-    aspect-ratio: 0;
-    border-radius: var(--r);
-    --_m:/calc(2*var(--r)) calc(2*var(--r))
-      radial-gradient(#000 70%,#0000 72%) no-repeat;
-    mask:
-      right calc(var(--s) + var(--r)) top 0 var(--_m),
-      right calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 100% 0,#0000 99%,#000 101%) 
-       calc(-1*var(--r)) var(--r) no-repeat,
-      conic-gradient(at calc(100% - var(--s) - 2*var(--r)) calc(var(--s) + 2*var(--r)),
-       #0000 25%,#000 0);
+  background-image: url(../../../public/designInspiration/uxup-card-4.svg);
+  --r: 1rem; /* the radius */
+  --s: 10rem; /* the size of the corner*/
+
+  aspect-ratio: 0;
+  border-radius: var(--r);
+  --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(
+      #000 70%,
+      #0000 72%
+    ) no-repeat;
+  mask: right calc(var(--s) + var(--r)) top 0 var(--_m),
+    right calc(var(--s) + var(--r)) var(--_m),
+    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 101%)
+      calc(-1 * var(--r)) var(--r) no-repeat,
+    conic-gradient(
+      at calc(100% - var(--s) - 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+      #0000 25%,
+      #000 0
+    );
+  p {
+    font-size: 1.125rem;
+    min-width: 24rem;
+    max-width: min-content;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+  }
 }
 .uxup-5 {
-    background-image: url(../../../public/designInspiration/uxup-card-5.svg);
-    --r: 2rem; /* the radius */
-    --s: 9rem; /* the size of the corner*/
-    
-    aspect-ratio: 0;
-    border-radius: var(--r);
-    --_m:/calc(2*var(--r)) calc(2*var(--r))
-      radial-gradient(#000 70%,#0000 72%) no-repeat;
-    mask:
-      calc(var(--s) + var(--r)) 0 var(--_m),
-      0 calc(var(--s) + var(--r)) var(--_m),
-      radial-gradient(var(--s) at 0 0,#0000 99%,#000 101%) 
-       var(--r) var(--r) no-repeat,
-      conic-gradient(at calc(var(--s) + 2*var(--r)) calc(var(--s) + 2*var(--r)),
-       #000 75%,#0000 0);
-       text-align: right;
+  background-image: url(../../../public/designInspiration/uxup-card-5.svg);
+  --r: 1rem; /* the radius */
+  --s: 10rem; /* the size of the corner*/
+
+  aspect-ratio: 0;
+  border-radius: var(--r);
+  --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(
+      #000 70%,
+      #0000 72%
+    ) no-repeat;
+  mask: calc(var(--s) + var(--r)) 0 var(--_m),
+    0 calc(var(--s) + var(--r)) var(--_m),
+    radial-gradient(var(--s) at 0 0, #0000 99%, #000 101%) var(--r) var(--r)
+      no-repeat,
+    conic-gradient(
+      at calc(var(--s) + 2 * var(--r)) calc(var(--s) + 2 * var(--r)),
+      #000 75%,
+      #0000 0
+    );
+  text-align: end;
+  p {
+    font-size: 1.125rem;
+    min-width: 24rem;
+    max-width: min-content;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    display: -webkit-inline-flex;
+  }
+}
+
+.uxup-top-55 {
+  top: 55% !important;
+}
+
+.uxup-card-mobail {
+  border-radius: 1.75rem;
+  padding: 1.5rem;
+  background-color: $neutral-800;
+  border: 0.1rem solid $neutral-700;
+  color: $neutral-100;
+  h1 {
+    font-size: $font-size-paragraph-large-tablet;
+    font-weight: bold;
+  }
+  p {
+    font-size: $font-size-paragraph;
+  }
 }
