@@ -15,7 +15,7 @@ const DesignInspirationComponent: React.FC = () => {
               business.
             </p>
           </div>
-          <div className="position-relative mt-3 d-sm-none d-md-none d-lg-none d-xl-block">
+          <div className="position-relative mt-3 d-none d-sm-none d-md-none d-lg-none d-xl-block">
             <div className="row justify-content-center g-3">
               <div className="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
                 <div className="uxup-card uxup-1">
@@ -72,7 +72,7 @@ const DesignInspirationComponent: React.FC = () => {
             </div>
           </div>
 
-          <div className="d-none d-md-block d-lg-block d-xl-none d-xxl-none">
+          <div className="d-sm-block d-md-block d-lg-block d-xl-none d-xxl-none">
             <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 row-cols-lg-3 row-cols-xl-3 justify-content-center g-3">
               <div className="col-auto">
                 <div className="uxup-card-mobail">

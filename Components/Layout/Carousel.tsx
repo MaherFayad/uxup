@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 const images = [
   "/path/to/image1.jpg",
@@ -10,7 +10,6 @@ const images = [
 
 const Carousel: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -19,28 +18,23 @@ const Carousel: React.FC = () => {
       let scrollAmount = 0;
 
       const moveCarousel = () => {
-        if (!isPaused) {
-          scrollAmount += 1;
-          if (scrollAmount >= carousel.scrollWidth / 2) {
-            scrollAmount = 0;
-          }
-          carousel.scrollLeft = scrollAmount;
+        scrollAmount += 1;
+
+        // Scroll back to the beginning when we reach the end of the duplicated content
+        if (scrollAmount >= carousel.scrollWidth / 2) {
+          scrollAmount = 0; // Reset scroll amount to the beginning
         }
+        carousel.scrollLeft = scrollAmount;
       };
 
       const intervalId = setInterval(moveCarousel, 20); // Adjust speed here
 
       return () => clearInterval(intervalId); // Cleanup on unmount
     }
-  }, [isPaused]); // Re-run when `isPaused` state changes
+  }, []);
 
   return (
-    <div
-      className="carousel-container"
-      ref={carouselRef}
-      onMouseEnter={() => setIsPaused(true)}  // Pause on hover
-      onMouseLeave={() => setIsPaused(false)} // Resume when mouse leaves
-    >
+    <div className="carousel-container my-4" ref={carouselRef}>
       <div className="carousel">
         {images.map((image, index) => (
           <div className="carousel-slide" key={index}>
