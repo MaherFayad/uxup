@@ -43,9 +43,6 @@ const DigitalFutureComponent: React.FC = () => {
         </div>
       </div>
     </section>
-
-
-
   );
 };
 

@@ -7,6 +7,7 @@
 @import 'tokens/effects';
 
 @import 'component/uxup-nero-banner';
+@import 'component/designInspiration';
 
 @import 'component/header';
 @import 'component/footer';
@@ -29,13 +30,8 @@ html,
 body {
   max-width: 100vw;
   height: 100%;
-  
-  background: linear-gradient(45deg, var(--background), var(--foreground)); // Use custom properties
-  background-image: url(../../public/hero-banner/uxup-hero-banner.svg);
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: auto;
-
+  // background: linear-gradient(45deg, var(--background), var(--foreground)); // Use custom properties
+  background: linear-gradient(180deg, #141212, #141212 9.25%, #1f1f1f 29%, #191818 62%, #141212 78%);
   color: var(--foreground);
   font-family: $font-heading, $font-paragraph;
   -webkit-font-smoothing: antialiased;
