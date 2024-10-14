@@ -1,8 +1,8 @@
 import Layout from '../../Components/Layout/Layout';
-import HeroBanner from '../../Components/Layout/HeroBanner';
-import Carousel from '../../Components/Layout/Carousel';
-import DigitalFutureComponent from '../../Components/Layout/DigitalFutureComponent';
-import DesignInspirationComponent from '../../Components/Layout/DesignInspirationComponent';
+import HeroBanner from '../../Components/Sections/Home/HeroBanner';
+import Carousel from '../../Components/Sections/Home/Carousel';
+import DigitalFutureComponent from '../../Components/Sections/Home/DigitalFutureComponent';
+import DesignInspirationComponent from '../../Components/Sections/Home/DesignInspirationComponent';
 
 
 export default function Home() {
