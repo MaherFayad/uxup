@@ -1,11 +1,13 @@
 import React, { useEffect, useRef } from "react";
 
 const images = [
-  "/path/to/image1.jpg",
-  "/path/to/image2.jpg",
-  "/path/to/image3.jpg",
-  "/path/to/image4.jpg",
-  "/path/to/image5.jpg",
+  "/uxup-carousel/1.webp",
+  "/uxup-carousel/2.webp",
+  "/uxup-carousel/3.webp",
+  "/uxup-carousel/4.webp",
+  "/uxup-carousel/5.webp",
+  "/uxup-carousel/6.webp",
+  "/uxup-carousel/7.webp",
 ];
 
 const Carousel: React.FC = () => {
