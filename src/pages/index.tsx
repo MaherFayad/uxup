@@ -3,6 +3,7 @@ import HeroBanner from '../../Components/Sections/Home/HeroBanner';
 import Carousel from '../../Components/Sections/Home/Carousel';
 import DigitalFutureComponent from '../../Components/Sections/Home/DigitalFutureComponent';
 import DesignInspirationComponent from '../../Components/Sections/Home/DesignInspirationComponent';
+import AchievementsComponent from "../../Components/Sections/Home/AchievementsComponent";
 import FetchAndDisplayData from '../../Mock/Projects';
 
 
@@ -13,7 +14,8 @@ export default function Home() {
       <Carousel />
       <DigitalFutureComponent />
       <DesignInspirationComponent />
-      <FetchAndDisplayData />
+      {/* <FetchAndDisplayData /> */}
+      <AchievementsComponent />
     </Layout>
   );
 }
