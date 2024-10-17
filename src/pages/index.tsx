@@ -5,6 +5,7 @@ import DigitalFutureComponent from '../../Components/Sections/Home/DigitalFuture
 import DesignInspirationComponent from '../../Components/Sections/Home/DesignInspirationComponent';
 import AchievementsComponent from "../../Components/Sections/Home/AchievementsComponent";
 import FetchAndDisplayData from '../../Mock/Projects';
+import ContactFormComponent from '../../Components/Sections/Home/ContactFormComponent';
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Carousel />
       <DigitalFutureComponent />
       <DesignInspirationComponent />
+      <ContactFormComponent />
       {/* <FetchAndDisplayData /> */}
       <AchievementsComponent />
     </Layout>

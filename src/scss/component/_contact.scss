@@ -1,0 +1,67 @@
+/* Define your color variables */
+$input-border-color: $neutral-800; // For border color
+$input-placeholder-color: $neutral-500; // For placeholder text color
+$input-bg: $neutral-950; // For input background color
+$input-color: $neutral-100; // For input text color
+
+/* Override Bootstrap variables if necessary */
+$primary: $primary-500;
+$secondary: $neutral-500;
+$body-bg: $neutral-950;
+$body-color: $neutral-100;
+$font-family-base: $font-paragraph;
+$font-family-headings: $font-heading;
+$font-size-base: $font-size-paragraph;
+
+/* Import Bootstrap */
+@import "~bootstrap/scss/bootstrap";
+.contact-info{
+    @media screen and (max-width: 728px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 4rem;
+        width: 100%;
+    }
+}
+/* Custom styles for the contact form */
+.contact-form {
+    /* Override Bootstrap CSS variables */
+    --bs-border-color: $input-border-color;
+    --bs-input-bg: $input-bg;
+    --bs-input-color: $input-color;
+    --bs-placeholder-color: $input-placeholder-color;
+    --bs-border-radius: 1rem;
+
+    border-radius: 1rem !important;
+    padding: 0.75rem 1rem;
+
+    /* For placeholder styling */
+    &::placeholder {
+        color: var(--bs-placeholder-color);
+        opacity: 1;
+    }
+
+    /* Remove default focus outline */
+    &:focus {
+        box-shadow: none;
+        --bs-border-color: $primary-500;
+    }
+    @media screen and (max-width: 728px) {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    }
+}
+
+.input-field {
+    padding: 0.75rem 1.25rem;
+}
+
+.input-area {
+    padding: 0.75rem 1.25rem 4rem 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
