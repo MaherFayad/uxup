@@ -34,7 +34,7 @@ const AchievementsComponent: React.FC = () => {
     },
   ];
 
-  const itemsPerPage = 3;
+  const itemsPerPage = 2;
   const totalItems = achievements.length;
 
   const nextSlide = () => {

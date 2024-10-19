@@ -63,7 +63,7 @@ const DesignInspirationComponent: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="position-absolute top-50 uxup-top-55 start-50 translate-middle">
+            <div className="position-absolute top-50 uxup-top-55 start-50">
               <img
                 src="./designInspiration/uxup-logo.svg"
                 alt="UXup Logo" // Added alt text

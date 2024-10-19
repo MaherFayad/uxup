@@ -15,9 +15,9 @@ export default function Home() {
       <Carousel />
       <DigitalFutureComponent />
       <DesignInspirationComponent />
-      <ContactFormComponent />
       {/* <FetchAndDisplayData /> */}
       <AchievementsComponent />
+      <ContactFormComponent />
     </Layout>
   );
 }
