@@ -22,6 +22,19 @@
   --foreground: #1F1F1F; // Use the actual color value from $neutral-900
 }
 
+// animations page
+.fade-in-section {
+  opacity: 0;
+  transform: scale(0.9); // Start with a smaller scale
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: scale(1); // Zooms to normal size
+}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #141212; // Same as $neutral-950
