@@ -9,28 +9,28 @@ const AchievementsComponent: React.FC = () => {
       title: "Sanarte",
       description:
         "An App that uses sound to destress and increase the work quality and productivity of remote workers.",
-      image: "/path/to/sanarte-image.jpg",
+      image: "https://fakeimg.pl/600x400",
     },
     {
       title: "LFG",
       description:
         "Habit-tracking app that combines fun goals and rewards to motivate users.",
-      image: "/path/to/lfg-image.jpg",
+      image: "https://fakeimg.pl/600x400",
     },
     {
       title: "Third Project",
       description: "A description of the third project goes here.",
-      image: "/path/to/third-image.jpg",
+      image: "https://fakeimg.pl/600x400",
     },
     {
       title: "Fourth Project",
       description: "A description of the fourth project goes here.",
-      image: "/path/to/fourth-image.jpg",
+      image: "https://fakeimg.pl/600x400",
     },
     {
       title: "Fifth Project",
       description: "A description of the fifth project goes here.",
-      image: "/path/to/fifth-image.jpg",
+      image: "https://fakeimg.pl/600x400",
     },
   ];
 
@@ -61,7 +61,7 @@ const AchievementsComponent: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <section className="py-4">
+    <section className="p-lg-5 my-lg-5">
       <div className="container">
         <div className="col-12">
           <div className="row">

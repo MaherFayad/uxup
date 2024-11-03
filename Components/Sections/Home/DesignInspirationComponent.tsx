@@ -3,7 +3,7 @@ import ButtonComponent from "./ButtonComponent"; // Assuming you have the Button
 
 const DesignInspirationComponent: React.FC = () => {
   return (
-    <section className="p-5">
+    <section className="p-lg-5 my-lg-5">
       <div className="container">
         <div className="col-12">
           <div className="text-center">

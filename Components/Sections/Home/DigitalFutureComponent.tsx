@@ -2,7 +2,7 @@ import React from "react";
 
 const DigitalFutureComponent: React.FC = () => {
   return (
-    <section className="p-5">
+    <section className="p-lg-5 my-lg-5">
       <div className="container">
         <div className="col-12">
           <div className="row">
