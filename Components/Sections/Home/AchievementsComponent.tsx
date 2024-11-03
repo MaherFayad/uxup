@@ -61,7 +61,7 @@ const AchievementsComponent: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <section className="p-lg-5 my-lg-5">
+    <section className="py-5 p-lg-5 my-lg-5">
       <div className="container">
         <div className="col-12">
           <div className="row">
