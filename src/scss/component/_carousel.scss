@@ -61,6 +61,7 @@
     padding-bottom: 2rem;
     overflow: visible;
   }
+
   
   .carousel {
     display: flex;
@@ -86,9 +87,9 @@
       object-fit: cover;
     }
   
-    &:hover img {
-      transform: scale(1.1); /* Zoom effect on hover */
-    }
+    // &:hover img {
+    //   transform: scale(1.1); /* Zoom effect on hover */
+    // }
   }
   
   .carousel-overlay {

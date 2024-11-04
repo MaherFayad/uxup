@@ -2,6 +2,12 @@
     background-image: url(../../../public/hero-banner/uxup-hero-banner.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: auto;
-    padding: 8rem 0 16rem 0 !important;
+    background-size: 1200px;
+    overflow: visible;
 }
+
+@media (max-width: 37.5rem) {
+    .uxup-bg-herobanner {
+        background-size: 600px;
+    }
+  }
