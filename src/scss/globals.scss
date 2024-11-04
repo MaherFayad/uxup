@@ -15,6 +15,7 @@
 @import 'component/header';
 @import 'component/footer';
 @import 'component/contact';
+@import 'component/preloader';
 
 // Your custom SCSS styles can go below
 
@@ -141,4 +142,58 @@ body {
   html {
     color-scheme: dark;
   }
+}
+
+
+
+/* styles.css */
+
+/* Preloader Overlay */
+.preloader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.preloader-overlay.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0s linear 1s;
+}
+
+/* Content Fade-in */
+.content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.content.visible {
+  opacity: 1;
+}
+
+/* Section Fade-in on Scroll */
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+}
+
+/* Apply to both html and body to ensure no scrolling */
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100%;
 }

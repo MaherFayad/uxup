@@ -1,5 +1,5 @@
 // Components/Preloader/Preloader.tsx
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 
 interface PreloaderProps {
@@ -7,18 +7,30 @@ interface PreloaderProps {
 }
 
 const Preloader: React.FC<PreloaderProps> = ({ onAnimationComplete }) => {
+  const playerRef = useRef<any>(null); // Use 'any' type for playerRef
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onAnimationComplete();
+    }, 3500);
+
+    setTimeout(() => {
+      if (playerRef.current) {
+        playerRef.current.pause(); // No TypeScript error with 'any' type
+      }
+    }, 3500);
+
+    return () => clearTimeout(timer);
+  }, [onAnimationComplete]);
+
   return (
     <div className="preloader">
       <Player
         autoplay
         loop={false}
         src="/uxup.json"
-        style={{ height: '100vh', width: '100%' }}
-        onEvent={(event) => {
-          if (event === 'complete') {
-            onAnimationComplete();
-          }
-        }}
+        style={{ width: '100%', height: '100%' }}
+        speed={2}
       />
     </div>
   );

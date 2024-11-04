@@ -1,0 +1,27 @@
+/* styles.css */
+
+/* General preloader styling */
+.preloader {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; /* Default height for desktop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale:0.8;
+    z-index: 9999;
+  }
+  
+  /* Adjust dimensions and alignment for mobile */
+  @media (max-width: 768px) {
+    .preloader {
+      top: 240px;
+      height: 800px; /* Set specific height for mobile */
+      width: 100vw;
+      scale:1.5;
+      align-items: flex-start; /* Align to the top */
+    }
+  }
+  
