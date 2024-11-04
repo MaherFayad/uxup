@@ -96,7 +96,7 @@ body {
     /* Button padding */
     text-align: left;
     font-size: $font-size-paragraph;
-    font-weight: 600;
+    font-weight: 400;
     /* Bold text */
     color: var(--text-100);
     /* Text color */
@@ -196,4 +196,9 @@ body.no-scroll {
   height: 100vh;
   position: fixed;
   width: 100%;
+}
+
+
+.font-body-regular{
+  font-weight: 300;
 }

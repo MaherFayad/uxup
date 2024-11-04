@@ -65,3 +65,12 @@ $font-size-base: $font-size-paragraph;
     align-items: center;
     justify-content: flex-start;
 }
+
+
+.frame-icon {
+    width: 277.6px;
+    position: relative;
+    height: 252px;
+    overflow: hidden;
+    flex-shrink: 0;
+}

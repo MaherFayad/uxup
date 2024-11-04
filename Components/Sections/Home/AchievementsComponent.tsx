@@ -28,6 +28,18 @@ const AchievementsComponent: React.FC = () => {
         "An App that uses sound to destress and increase the work quality and productivity of remote workers.",
       image: "https://fakeimg.pl/600x400",
     },
+    {
+      title: "Sanarte",
+      description:
+        "An App that uses sound to destress and increase the work quality and productivity of remote workers.",
+      image: "https://fakeimg.pl/600x400",
+    },
+    {
+      title: "Sanarte",
+      description:
+        "An App that uses sound to destress and increase the work quality and productivity of remote workers.",
+      image: "https://fakeimg.pl/600x400",
+    },
     // Add more achievements as needed
   ];
 
