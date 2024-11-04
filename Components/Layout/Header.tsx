@@ -3,6 +3,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Layer1Icon from '../../public/Logo.svg';
 
 // Helper function to handle scrolling to a specific section
@@ -26,9 +27,9 @@ const NavigationLinks: React.FC<{
       <b className="Nav-Link" onClick={() => scrollToSection(servicesRef)}>
         Services
       </b>
-      <b className="Nav-Link" onClick={() => scrollToSection(projectsRef)}>
-        Projects
-      </b>
+      <Link href="/projects" passHref>
+        <b className="Nav-Link">Projects</b>
+      </Link>
     </div>
   );
 };
@@ -80,7 +81,9 @@ const Header: React.FC<{
     <header ref={headerRef} className={`Navcontainer ${isScrolled ? 'scrolled' : ''}`}>
       <div className="Navcontent uxup-fs-paragraph">
         <div className={`logo ${isScrolled ? 'scrolled' : ''}`}>
+        <Link href="/" passHref>
           <Image className="nav-logo" alt="UXUP Logo" src={Layer1Icon} />
+          </Link>
         </div>
 
         {/* Navigation Links */}
