@@ -5,47 +5,47 @@
     transform: translateY(0);
   }
   20% {
-    transform: translateY(-8px);
+    transform: translateY(-4px); /* Reduced distance */
   }
   40%, 60% {
-    transform: translateY(8px);
+    transform: translateY(4px); /* Reduced distance */
   }
   80% {
-    transform: translateY(-8px);
+    transform: translateY(-4px); /* Reduced distance */
   }
 }
 
 .carousel-slide {
-  animation: shakeY 3s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  animation: shakeY 5s cubic-bezier(0.42, 0, 0.58, 1) infinite; /* Slower animation */
 }
 
-// Staggered delays for each of the 7 slides to enhance the wave effect
+/* Staggered delays for each of the 7 slides to enhance the wave effect */
 .carousel-slide:nth-child(1) {
   animation-delay: 0s;
 }
 
 .carousel-slide:nth-child(2) {
-  animation-delay: 0.4s;
+  animation-delay: 0.5s; /* Slightly increased delay */
 }
 
 .carousel-slide:nth-child(3) {
-  animation-delay: 0.8s;
+  animation-delay: 1s;
 }
 
 .carousel-slide:nth-child(4) {
-  animation-delay: 1.2s;
+  animation-delay: 1.5s;
 }
 
 .carousel-slide:nth-child(5) {
-  animation-delay: 1.6s;
-}
-
-.carousel-slide:nth-child(6) {
   animation-delay: 2s;
 }
 
+.carousel-slide:nth-child(6) {
+  animation-delay: 2.5s;
+}
+
 .carousel-slide:nth-child(7) {
-  animation-delay: 2.4s;
+  animation-delay: 3s;
 }
 
 // Add more delays if you have more slides
@@ -53,26 +53,31 @@
 
 .carousel-container {
     width: 100%;
-    overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
+    align-content: center;  
+    gap: 8px;
+    padding-bottom: 2rem;
+    overflow: visible;
   }
   
   .carousel {
     display: flex;
     width: fit-content;
+    gap: 16px;
     align-items: center;
     justify-content: center;
+    overflow: visible;
   }
   
   .carousel-slide {
     min-width: 18.75rem; /* 300px -> 18.75rem */
-    margin: 0 0.625rem; /* 10px -> 0.625rem */
     transition: transform 0.3s ease-in-out;
     position: relative;
-    overflow: hidden;
     border-radius: 0.75rem; /* 12px -> 0.75rem */
+    overflow: hidden;
+
   
     img {
       width: 100%;
@@ -88,10 +93,11 @@
   
   .carousel-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    width: 100vw;
+    align-self: center;
+    place-self: center;
+    justify-self: center;
     height: 100%;
-    background: linear-gradient(180deg, rgba(21, 20, 20, 0) 23.69%, #151414 90.38%);
+    background: linear-gradient(180deg, rgba(21, 20, 20, 0) 12%, #1F1E1E 80%);
     pointer-events: none; /* Allow interactions with underlying elements */
   }

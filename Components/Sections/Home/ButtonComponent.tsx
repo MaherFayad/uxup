@@ -88,7 +88,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
             disabled={isDisable}
             id={`btn-${id}`}
             onClick={doClick}
-            className={`uxup-btn font-body-semi-bold w-100 d-flex gap-2 justify-content-center position-relative ${currentBtnClass}`}
+            className={`button primary font-body-semi-bold  d-flex gap-2 justify-content-center position-relative ${currentBtnClass}`}
             aria-label={text} // Ensure button has discernible text for screen readers
             title={text} // Optional, can be used to add tooltip or better accessibility
           >
@@ -120,7 +120,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
             type="button"
             disabled={true}
             id={`btn-${id}`}
-            className={`uxup-btn font-body-semi-bold w-100 ${currentBtnClass}`}
+            className={`button primary font-body-semi-bold  ${currentBtnClass}`}
             aria-label="Loading" // Label the button to screen readers as 'loading'
           >
             <div className={`loadingDot-${type}`} />

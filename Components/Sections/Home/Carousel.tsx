@@ -49,6 +49,6 @@ const Carousel: React.FC = () => {
       <div className="carousel-overlay"></div>
     </div>
   );
-};
+};  
 
 export default Carousel;
