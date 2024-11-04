@@ -37,7 +37,7 @@ const Carousel: React.FC = () => {
 
   return (
     <div className="carousel-container my-4" ref={carouselRef}>
-      <div className="carousel">
+      <div className="carousel-top">
         {images.map((image, index) => (
           <div className="carousel-slide" key={index}>
             <img src={image} alt={`carousel-slide-${index}`} />

@@ -62,8 +62,66 @@
     overflow: visible;
   }
 
+  .carousel-top {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
   
-  .carousel {
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      transform: translateX(calc(-100% * var(--current-slide, 0) / 2)); // Slide by 1 element
+    }
+  
+    .slide {
+      min-width: 40%;
+      display: flex;
+      overflow: hidden;
+      background-color: $neutral-900;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0.75rem;
+      box-sizing: border-box;
+      transition: transform 0.3s ease-in-out;
+      border-radius: 1rem;
+      margin: 0.3rem;
+  
+      .achievement-image {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+  
+      .achievement-info {
+        color: #f5f5f5;
+  
+        h3 {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+  
+        p {
+          margin-top: 0.5rem;
+          font-size: 1rem;
+          color: #bbb;
+        }
+      }
+    }
+  
+    /* Left and Right Gradient Overlays */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 2.5rem; /* Adjust width as necessary for desired gradient length */
+      height: 100%;
+      z-index: 1;
+    }
+  }
+  .carousel-top {
     display: flex;
     width: fit-content;
     gap: 16px;
