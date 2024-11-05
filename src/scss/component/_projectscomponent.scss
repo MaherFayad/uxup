@@ -3,3 +3,25 @@
     border-radius: 1rem;
     padding: .25rem;
 }
+
+.project-value {
+    align-self: stretch;
+    text-align: center;
+    color: #E0E0E0;
+    font-size: 48px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    line-height: 56px;
+    animation: countAnimation 1s ease-in-out;
+  }
+  
+  @keyframes countAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

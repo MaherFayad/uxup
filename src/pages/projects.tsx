@@ -1,5 +1,6 @@
 import Layout from "../../Components/Layout/Layout";
 import CustomComponent from "../../Components/Sections/projects/ProjectsComponent";
+import CounterComponent from "../../Components/Sections/projects/CounterComponent";
 import { useInView } from "../../Components/hooks/useInView"; // Import the hook
 
 export default function Home() {
@@ -22,7 +23,16 @@ export default function Home() {
         <CustomComponent />
       </div>
 
-      
+      <div
+        ref={heroBannerInView.setRef}
+        className={`fade-in-section ${
+          heroBannerInView.isInView ? "visible" : ""
+        }`}
+      >
+        <CounterComponent />
+      </div>
+
+
     </Layout>
   );
 }
