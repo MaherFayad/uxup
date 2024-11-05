@@ -61,6 +61,7 @@ export default function Home() {
 
           <div
             ref={digitalFutureInView.setRef}
+            id='About-us'
             className={`fade-in-section ${digitalFutureInView.isInView ? "visible" : ""}`}
           >
             <DigitalFutureComponent />
@@ -68,6 +69,7 @@ export default function Home() {
 
           <div
             ref={designInspirationInView.setRef}
+            id='Services'
             className={`fade-in-section ${designInspirationInView.isInView ? "visible" : ""}`}
           >
             <DesignInspirationComponent />
@@ -75,6 +77,7 @@ export default function Home() {
 
           <div
             ref={achievementsInView.setRef}
+            id='Projects'
             className={`fade-in-section ${achievementsInView.isInView ? "visible" : ""}`}
           >
             <AchievementsComponent />
@@ -82,6 +85,7 @@ export default function Home() {
 
           <div
             ref={contactFormInView.setRef}
+            id='Contact'
             className={`fade-in-section ${contactFormInView.isInView ? "visible" : ""}`}
           >
             <ContactFormComponent />

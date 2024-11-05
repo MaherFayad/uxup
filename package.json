@@ -11,6 +11,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@lottiefiles/react-lottie-player": "^3.5.4",
+    "@rive-app/react-canvas": "^4.16.1",
     "bootstrap": "^5.3.3",
     "lottie-react": "^2.4.0",
     "next": "14.2.14",
