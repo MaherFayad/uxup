@@ -9,10 +9,21 @@ const ContactFormComponent: React.FC = () => {
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const sendEmail = (e: FormEvent) => {
-    // e.preventDefault(); // Prevent the default form submission
+  // State for form validation
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-    if (form.current) {
+  // Check if all fields have values
+  const isFormValid = formData.name && formData.email && formData.phone && formData.message;
+
+  const sendEmail = (e: FormEvent) => {
+    e.preventDefault(); // Prevent the default form submission
+
+    if (form.current && isFormValid) {
       setIsLoading(true);
       setSuccess(false);
       setError(false);
@@ -30,6 +41,14 @@ const ContactFormComponent: React.FC = () => {
           }
         );
     }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
   const handleRetry = () => {
@@ -65,25 +84,25 @@ const ContactFormComponent: React.FC = () => {
           {/* Conditional Rendering for Form, Success, and Error States */}
           <div className="col-12 col-lg-7">
             {success ? (
-              <div className="p-4 uxup-bg-neutral-900 contact-form">
+              <div className="p-4 uxup-bg-neutral-900 contact-form success">
                 <img className="frame-icon" alt="Success" src="/success.svg" />
                 <div className="content-body-text-base">
-                  <div className="text-header">
-                    <b className="uxup-fs-h4 fw-bold text-gradient"><br/>Message Sent Successfully</b>
+                  <div className="text-header success">
+                    <b className="uxup-fs-h4 fw-bold text-gradient"><br />Message Sent Successfully</b>
                     <p className="uxup-fs-paragraph uxup-color-text-300 uxup-color-text-100">
-                    <br/>Thanks for reaching out. A representative of UXup will contact you as soon as possible.
+                      <br />Thanks for reaching out. A representative of UXup will contact you as soon as possible.
                     </p>
                   </div>
                 </div>
               </div>
             ) : error ? (
-              <div className="p-4 uxup-bg-neutral-900 contact-form">
+              <div className="p-4 uxup-bg-neutral-900 contact-form success">
                 <img className="frame-icon" alt="Error" src="/error.svg" />
                 <div className="content-body-text-base">
                   <div className="text-header">
-                    <b className="uxup-fs-h4 fw-bold text-gradient"><br/>Message Failed to Send</b>
+                    <b className="uxup-fs-h4 fw-bold text-gradient"><br />Message Failed to Send</b>
                     <p className="uxup-fs-paragraph uxup-color-text-300 uxup-color-text-100">
-                    <br/>Something went wrong. Please try sending your message again.
+                      <br />Something went wrong. Please try sending your message again.
                     </p>
                     <FormButton
                       id="retry-button"
@@ -101,10 +120,13 @@ const ContactFormComponent: React.FC = () => {
                   </label>
                   <input
                     type="text"
-                    name="from_name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
                     className="input-field form-control uxup-bg-neutral-950 uxup-color-neutral-100"
                     id="name"
                     placeholder="Enter Your Name"
+                    required
                   />
                 </div>
 
@@ -115,10 +137,13 @@ const ContactFormComponent: React.FC = () => {
                     </label>
                     <input
                       type="email"
-                      name="from_email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
                       className="input-field form-control uxup-bg-neutral-950 uxup-color-neutral-100"
                       id="email"
                       placeholder="example@example.com"
+                      required
                     />
                   </div>
                   <div className="col-md-6 mb-3">
@@ -127,10 +152,13 @@ const ContactFormComponent: React.FC = () => {
                     </label>
                     <input
                       type="tel"
-                      name="from_tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
                       className="input-field form-control uxup-bg-neutral-950 uxup-color-neutral-100"
                       id="phone"
                       placeholder="+XXX XXXX XXX"
+                      required
                     />
                   </div>
                 </div>
@@ -142,16 +170,19 @@ const ContactFormComponent: React.FC = () => {
                   <textarea
                     className="input-area form-control uxup-bg-neutral-950 uxup-color-neutral-100"
                     name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
                     id="message"
                     placeholder="I want ..."
+                    required
                   ></textarea>
                 </div>
 
                 <FormButton
                   id="send-message-button"
                   text={isLoading ? "Sending..." : "Send Message"}
-                  isDisabled={isLoading}
-                  onClick={sendEmail}
+                  isDisabled={isLoading || !isFormValid}
+                  type="submit" // Set type to "submit" for form submission
                 />
               </form>
             )}

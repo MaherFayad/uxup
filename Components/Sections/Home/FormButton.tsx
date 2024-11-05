@@ -7,7 +7,8 @@ type FormButtonProps = {
   text: string;
   showLoading?: boolean;
   isDisabled?: boolean;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  type?: "button" | "submit"; // Add type prop to handle form submission
 };
 
 const FormButton: React.FC<FormButtonProps> = ({
@@ -16,12 +17,13 @@ const FormButton: React.FC<FormButtonProps> = ({
   showLoading = false,
   isDisabled = false,
   onClick,
+  type = "button", // Default type is "button"
 }) => {
   return (
     <div className="col position-relative">
       {!showLoading ? (
         <button
-          type="button"
+          type={type} // Use the type prop to allow "submit" for form submissions
           disabled={isDisabled}
           id={`btn-${id}`}
           onClick={onClick}
