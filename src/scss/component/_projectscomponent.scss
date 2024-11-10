@@ -21,3 +21,8 @@
       transform: translateY(0);
     }
   }
+
+  .img-fluid.project{
+    max-height: 25rem;
+    object-fit: cover;
+  }

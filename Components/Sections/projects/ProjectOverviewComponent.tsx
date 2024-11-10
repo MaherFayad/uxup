@@ -100,7 +100,7 @@ const ProjectOverview: React.FC = () => {
                     <img
                       src="/projects-img/uxup-banner.png"
                       alt="Project Illustration"
-                      className="img-fluid p-2 rounded-4 w-100"
+                      className="img-fluid project p-2 rounded-4 w-100"
                     />
                   </picture>
             </div>
