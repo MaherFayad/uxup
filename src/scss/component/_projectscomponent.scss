@@ -1,17 +1,13 @@
 .uxup-section {
     background-color: $neutral-900;
     border-radius: 1rem;
-    padding: .25rem;
+    padding: 1rem;
 }
 
 .project-value {
     align-self: stretch;
     text-align: center;
-    color: #E0E0E0;
-    font-size: 48px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-    line-height: 56px;
+    line-height: 5rem;
     animation: countAnimation 1s ease-in-out;
   }
   
