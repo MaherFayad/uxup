@@ -3,6 +3,8 @@ import CustomComponent from "../../Components/Sections/projects/ProjectsComponen
 import CounterComponent from "../../Components/Sections/projects/CounterComponent";
 import ProjectOverview from "../../Components/Sections/projects/ProjectOverviewComponent";
 import { useInView } from "../../Components/hooks/useInView"; // Import the hook
+import AchievementsComponent from "../../Components/Sections/Home/AchievementsComponent";
+import ContactFormComponent from "../../Components/Sections/Home/ContactFormComponent";
 
 export default function Home() {
   // Apply useInView to each section
@@ -41,6 +43,22 @@ export default function Home() {
       >
       <ProjectOverview />
       </div>
+
+      <div
+            ref={achievementsInView.setRef}
+            id='Projects'
+            className={`fade-in-section ${achievementsInView.isInView ? "visible" : ""}`}
+          >
+            <AchievementsComponent />
+          </div>
+
+          <div
+            ref={contactFormInView.setRef}
+            id='Contact'
+            className={`fade-in-section ${contactFormInView.isInView ? "visible" : ""}`}
+          >
+            <ContactFormComponent />
+          </div>
 
 
     </Layout>
