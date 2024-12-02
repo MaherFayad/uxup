@@ -1,6 +1,18 @@
 import React from "react";
 
-const ProjectsComponent = () => {
+// Define the type for the `project` prop
+interface Project {
+  title1: string;
+  slug: string;
+  tags: string[];
+  coverImg: string;
+}
+
+interface ProjectsComponentProps {
+  project: Project;
+}
+
+const ProjectsComponent: React.FC<ProjectsComponentProps> = ({ project }) => {
   return (
     <section className="py-5 mt-5 uxup-color-neutral-100">
       <div className="container mt-5">
@@ -8,41 +20,26 @@ const ProjectsComponent = () => {
           <div className="col-12">
             <div className="row">
               <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <p className="uxup-fs-paragraph">LFG Mobile App</p>
-                <h2 className="uxup-fs-h3 mt-2 mb-4">
-                  habit-tracking app that WITH fun Gamification to motivate
-                  users.
-                </h2>
+                <p className="uxup-fs-paragraph">{project.title1}</p>
+                <h2 className="uxup-fs-h3 mt-2 mb-4">{project.slug}</h2>
                 <div className="d-inline-flex flex-start align-items-start">
-                  <div className="badge px-2 py-1 d-flex justify-content-center align-items-center">
-                    <h5>
-                      <span className="badge text-bg-light rounded-pill">
-                        Habit Tracking
-                      </span>
-                    </h5>
-                  </div>
-                  <div className="badge px-2 py-1 d-flex justify-content-center align-items-center">
-                    <h5>
-                      <span className="badge text-bg-light rounded-pill">
-                        Mobile App
-                      </span>
-                    </h5>
-                  </div>
-                  <div className="badge px-2 py-1 d-flex justify-content-center align-items-center">
-                    <h5>
-                      <span className="badge text-bg-light rounded-pill">
-                        Gamification
-                      </span>
-                    </h5>
-                  </div>
+                  {project.tags.map((tag, index) => (
+                    <div key={index} className="badge px-2 py-1 d-flex justify-content-center align-items-center">
+                      <h5>
+                        <span className="badge text-bg-light rounded-pill">
+                          {tag}
+                        </span>
+                      </h5>
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <img
-                  src="/projects-img/uxup-img-top.png"
+                  src={project.coverImg}
                   className="img-fluid rounded-4"
-                  alt=""
-                  title=""
+                  alt={project.title1}
+                  title={project.title1}
                 />
               </div>
             </div>
