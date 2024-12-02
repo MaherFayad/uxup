@@ -1,6 +1,6 @@
 export const ProjectContent = [
   {
-    id: "LFG",
+    id: "1",
     title1: "LFG Mobile App",
     slug: 'habit-tracking app that WITH fun Gamification  to motivate users.',
     coverImg: 'https://firebasestorage.googleapis.com/v0/b/falcrum4-7eb0b.appspot.com/o/Blog%2FLavr-International.webp?alt=media&token=8ff47789-2a28-4f16-b0b7-6ac131d5032a',
@@ -52,4 +52,5 @@ export const ProjectContent = [
                   </div>
 
                   `,
-  },];
+  },
+];

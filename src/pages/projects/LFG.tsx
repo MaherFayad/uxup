@@ -16,7 +16,7 @@ export default function Home() {
   const contactFormInView = useInView(0.2);
 
   // Find the project with id = 1
-  const project = ProjectContent.find(p => p.id === "LFG");
+  const project = ProjectContent.find(p => p.id === "1");
 
   // If the project doesn't exist, return a fallback UI.
   if (!project) return <div>Project not found.</div>;
