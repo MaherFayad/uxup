@@ -1,3 +1,5 @@
+// pages/projects/LucyPhotographersPlatform.tsx
+
 import Layout from "../../../Components/Layout/Layout";
 import CustomComponent from "../../../Components/Sections/projects/ProjectsComponent";
 import CounterComponent from "../../../Components/Sections/projects/CounterComponent";
@@ -7,7 +9,7 @@ import AchievementsComponent from "../../../Components/Sections/Home/Achievement
 import ContactFormComponent from "../../../Components/Sections/Home/ContactFormComponent";
 import { ProjectContent } from "../../../Components/Contants/ProjectContent";
 
-export default function Home() {
+export default function LucyPhotographersPlatform() {
   // Apply useInView to each section
   const heroBannerInView = useInView(0.2);
   const carouselInView = useInView(0.2);
@@ -15,14 +17,14 @@ export default function Home() {
   const achievementsInView = useInView(0.2);
   const contactFormInView = useInView(0.2);
 
-  // Find the project with id = 1
-  const project = ProjectContent.find((p) => p.id === "1");
+  // Find the project with id = "2"
+  const project = ProjectContent.find((p) => p.id === "2");
 
   // If the project doesn't exist, return a fallback UI.
   if (!project) return <div>Project not found.</div>;
 
   return (
-    <Layout title="Home" description="Redefining Digital Experiences">
+    <Layout title={project.title} description={project.Overview}>
       {/* CustomComponent for Projects Overview */}
       <div
         ref={heroBannerInView.setRef}

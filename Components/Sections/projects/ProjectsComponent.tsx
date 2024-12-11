@@ -2,10 +2,15 @@ import React from "react";
 
 // Define the type for the `project` prop
 interface Project {
-  title1: string;
+  id: string;
+  title?: string; // Optional title
+  title1?: string; // Optional title1
   slug: string;
-  tags: string[];
   coverImg: string;
+  tags: string[];
+  Overview: string;
+  Epic: string;
+  Development: string;
 }
 
 interface ProjectsComponentProps {

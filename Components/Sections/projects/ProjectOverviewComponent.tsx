@@ -69,9 +69,8 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
               <div className="col-12">
                 <div className="row p-4">
-                  <p className="uxup-fs-paragraph uxup-color-neutral-200 mt-3 mb-5">
-                  <div dangerouslySetInnerHTML={{ __html: project.Development }} />
-                  </p>
+                  <div className="uxup-fs-paragraph uxup-color-neutral-200 mt-3 mb-5" dangerouslySetInnerHTML={{ __html: project.Development }} >
+                  </div>
                 </div>
               </div>
             </div>
