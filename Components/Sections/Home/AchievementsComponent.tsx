@@ -14,49 +14,49 @@ const AchievementsComponent: React.FC = () => {
       title: "LFG Mobile App",
       description:
         "A mobile application that leverages gamification to help users maintain daily habits by chasing rewards and addressing internal motivations.",
-      image: "https://firebasestorage.googleapis.com/v0/b/falcrum4-7eb0b.appspot.com/o/Blog%2FLavr-International.webp?alt=media&token=8ff47789-2a28-4f16-b0b7-6ac131d5032a",
+      image: "/project/project_1/element.jpg",
       link: "/projects/MobileApp",
     },
     {
       title: "Lucy - Photographer's Platform",
       description:
         "A platform that empowers photographers to collaborate and create meaningful change through storytelling and community engagement.",
-      image: "https://example.com/lucy.jpg",
+      image: "/project/project_2/element.jpg",
       link: "/projects/LucyPhotographersPlatform",
     },
     {
       title: "NFT Print Pro",
       description:
         "A platform bridging the digital and physical worlds, allowing users to print and own high-quality, sustainable tangible versions of their NFTs.",
-      image: "https://example.com/nft-print-pro.jpg",
+      image: "/project/project_3/element.jpg",
       link: "/projects/NFTPrintPro",
     },
     {
       title: "FACEDOCT App",
       description:
         "An innovative community platform for doctors to share insights, collaborate on medical cases, and access valuable resources securely.",
-      image: "https://example.com/facedoct.jpg",
+      image: "/project/project_4/element.jpg",
       link: "/projects/FACEDOCTApp",
     },
     {
       title: "Banknote App",
       description:
         "A secure and efficient platform facilitating legally binding online agreements for tool and asset management with seamless e-signatures.",
-      image: "https://example.com/banknote-app.jpg",
+      image: "/project/project_5/element.jpg",
       link: "/projects/BanknoteApp",
     },
     {
       title: "Slash Website",
       description:
         "A custom software solutions provider offering tailored web and mobile applications to empower businesses across various industries.",
-      image: "https://example.com/slash-website.jpg",
+      image: "/project/project_6/element.jpg",
       link: "/projects/SlashWebsite",
     },
     {
       title: "Pyramids City",
       description:
         "An iconic development in the New Administrative Capital, offering unparalleled retail, dining, and entertainment experiences across 155 acres.",
-      image: "https://example.com/pyramids-city.jpg",
+      image: "/project/project_7/element.jpg",
       link: "/projects/PyramidsCity",
     },
   ];
