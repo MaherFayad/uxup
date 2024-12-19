@@ -160,3 +160,80 @@
     background: linear-gradient(180deg, rgba(21, 20, 20, 0) 12%, #1F1E1E 80%);
     pointer-events: none; /* Allow interactions with underlying elements */
   }
+
+.carousel {
+  .swiper-slide {
+    height: auto;
+    min-height: min-content;
+    display: flex;
+    
+    .achievement-card {
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        
+        .achievement-image {
+          transform: scale(1.05);
+        }
+
+        .h-100 {
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .h-100 {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: var(--uxup-color-background-200);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .achievement-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .achievement-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      
+      .achievement-title {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      p {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--uxup-color-text-100);
+      }
+    }
+  }
+
+  // Add styles for the Swiper container
+  .swiper {
+    padding: 1rem 0;
+    margin: -1rem 0;
+  }
+}
+
+// Override Swiper's default auto-height
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: 100% !important;
+}

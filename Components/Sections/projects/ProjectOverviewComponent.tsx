@@ -1,10 +1,13 @@
 import React from "react";
+import Image from "next/image";
 
 // Define the type for the `project` prop
 interface Project {
   Overview: string;
   Epic: string;
   Development: string;
+  images?: string[];
+  coverImg?: string;
 }
 
 interface ProjectOverviewProps {
@@ -12,6 +15,8 @@ interface ProjectOverviewProps {
 }
 
 const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
+  console.log('Project images:', project.images);
+  
   return (
     <section className="py-5 mt-5 uxup-color-neutral-100">
       <div className="container mt-5">
@@ -30,7 +35,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                 <div className="col-12">
                   <picture>
                     <img
-                      src="/projects-img/uxup-p-hero.png"
+                      src={project.images?.[1] || "/projects-img/uxup-p-hero.png"}
                       alt="Project Illustration"
                       className="img-fluid p-2 rounded-4 w-100"
                     />
@@ -39,7 +44,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <picture>
                     <img
-                      src="/projects-img/uxup-p1.png"
+                      src={project.images?.[2] || "/projects-img/uxup-p1.png"}
                       alt="Project Illustration"
                       className="img-fluid p-2 rounded-4 w-100"
                     />
@@ -48,7 +53,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                   <picture>
                     <img
-                      src="/projects-img/uxup-p2.png"
+                      src={project.images?.[3] || "/projects-img/uxup-p2.png"}
                       alt="Project Illustration"
                       className="img-fluid p-2 rounded-4 w-100"
                     />
@@ -69,8 +74,10 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
             <div className="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
               <div className="col-12">
                 <div className="row p-4">
-                  <div className="uxup-fs-paragraph uxup-color-neutral-200 mt-3 mb-5" dangerouslySetInnerHTML={{ __html: project.Development }} >
-                  </div>
+                  <div 
+                    className="uxup-fs-paragraph uxup-color-neutral-200 mt-3 mb-5" 
+                    dangerouslySetInnerHTML={{ __html: project.Development }} 
+                  />
                 </div>
               </div>
             </div>
@@ -78,7 +85,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
               <div className="col-12">
                 <picture>
                   <img
-                    src="/projects-img/uxup-banner.png"
+                    src={project.images?.[4] || "/projects-img/uxup-banner.png"}
                     alt="Project Illustration"
                     className="img-fluid project p-2 rounded-4 w-100"
                   />

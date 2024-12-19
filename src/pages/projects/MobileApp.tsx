@@ -33,13 +33,14 @@ export default function MobileApp() {
         <CustomComponent project={project} />
       </div>
 
-      {/* CounterComponent */}
+
+      {/* CounterComponent
       <div
         ref={carouselInView.setRef}
         className={`fade-in-section ${carouselInView.isInView ? "visible" : ""}`}
       >
         <CounterComponent />
-      </div>
+      </div> */}
 
       {/* Project Overview */}
       <div

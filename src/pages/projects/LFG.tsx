@@ -15,8 +15,12 @@ export default function Home() {
   const achievementsInView = useInView(0.2);
   const contactFormInView = useInView(0.2);
 
-  // Find the project with id = 1
+  // Find the project with id = "1"
   const project = ProjectContent.find((p) => p.id === "1");
+  console.log("Full project data:", project);
+
+  // Add console log to debug
+  console.log("Project data:", project);
 
   // If the project doesn't exist, return a fallback UI.
   if (!project) return <div>Project not found.</div>;
@@ -31,13 +35,14 @@ export default function Home() {
         <CustomComponent project={project} />
       </div>
 
-      {/* CounterComponent */}
+
+      {/* CounterComponent
       <div
         ref={carouselInView.setRef}
         className={`fade-in-section ${carouselInView.isInView ? "visible" : ""}`}
       >
         <CounterComponent />
-      </div>
+      </div> */}
 
       {/* Project Overview */}
       <div

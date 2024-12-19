@@ -12,50 +12,43 @@ const AchievementsComponent: React.FC = () => {
   const achievements = [
     {
       title: "LFG Mobile App",
-      description:
-        "A mobile application that leverages gamification to help users maintain daily habits by chasing rewards and addressing internal motivations.",
+      description: "A gamified habit-tracking app with rewards system",
       image: "/project/project_1/element.jpg",
-      link: "/projects/MobileApp",
+      link: "/projects/LFG",
     },
     {
-      title: "Lucy - Photographer's Platform",
-      description:
-        "A platform that empowers photographers to collaborate and create meaningful change through storytelling and community engagement.",
+      title: "Lucy",
+      description: "A collaborative platform for photographers focused on storytelling and community",
       image: "/project/project_2/element.jpg",
       link: "/projects/LucyPhotographersPlatform",
     },
     {
       title: "NFT Print Pro",
-      description:
-        "A platform bridging the digital and physical worlds, allowing users to print and own high-quality, sustainable tangible versions of their NFTs.",
+      description: "A service to create physical prints of digital NFTs",
       image: "/project/project_3/element.jpg",
       link: "/projects/NFTPrintPro",
     },
     {
       title: "FACEDOCT App",
-      description:
-        "An innovative community platform for doctors to share insights, collaborate on medical cases, and access valuable resources securely.",
+      description: "A secure collaboration platform for medical professionals",
       image: "/project/project_4/element.jpg",
       link: "/projects/FACEDOCTApp",
     },
     {
       title: "Banknote App",
-      description:
-        "A secure and efficient platform facilitating legally binding online agreements for tool and asset management with seamless e-signatures.",
+      description: "A platform for managing digital contracts and e-signatures",
       image: "/project/project_5/element.jpg",
       link: "/projects/BanknoteApp",
     },
     {
       title: "Slash Website",
-      description:
-        "A custom software solutions provider offering tailored web and mobile applications to empower businesses across various industries.",
+      description: "A custom software development company website",
       image: "/project/project_6/element.jpg",
       link: "/projects/SlashWebsite",
     },
     {
       title: "Pyramids City",
-      description:
-        "An iconic development in the New Administrative Capital, offering unparalleled retail, dining, and entertainment experiences across 155 acres.",
+      description: "A 155-acre commercial development project in the New Administrative Capital",
       image: "/project/project_7/element.jpg",
       link: "/projects/PyramidsCity",
     },
@@ -102,7 +95,7 @@ const AchievementsComponent: React.FC = () => {
             <Swiper
               loop={true}
               modules={[FreeMode]}
-              onSwiper={(swiper) => (swiperRef.current = swiper)} // Get Swiper instance
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
               freeMode={{
                 enabled: true,
                 minimumVelocity: 0.02,
@@ -114,28 +107,39 @@ const AchievementsComponent: React.FC = () => {
                 sticky: false,
               }}
               spaceBetween={20}
-              slidesPerView={2.2} // Default for larger screens
+              slidesPerView={2.2}
               breakpoints={{
                 200: {
-                  slidesPerView: 1.25, // Show 1.25 slides on mobile screens
+                  slidesPerView: 1.25,
                 },
                 768: {
-                  slidesPerView: 2.5, // Show 2.5 slides on screens 768px and above
+                  slidesPerView: 2.5,
                 },
               }}
               className="carousel"
+              autoHeight={true}
+              updateOnWindowResize={true}
             >
               {achievements.map((achievement, index) => (
                 <SwiperSlide key={index} className="slide">
-                  <img
-                    src={achievement.image}
-                    alt={achievement.title}
-                    className="achievement-image"
-                  />
-                  <div className="achievement-info">
-                    <h3 className="uxup-fs-h4 fw-bold">{achievement.title}</h3>
-                    <p>{achievement.description}</p>
-                  </div>
+                  <a 
+                    href={achievement.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="achievement-card h-100"
+                  >
+                    <div className="h-100">
+                      <img
+                        src={achievement.image}
+                        alt={achievement.title}
+                        className="achievement-image"
+                      />
+                      <div className="achievement-info">
+                        <h3 className="uxup-fs-h4 fw-bold achievement-title">{achievement.title}</h3>
+                        <p>{achievement.description}</p>
+                      </div>
+                    </div>
+                  </a>
                 </SwiperSlide>
               ))}
             </Swiper>

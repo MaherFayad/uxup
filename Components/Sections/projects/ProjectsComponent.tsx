@@ -11,6 +11,7 @@ interface Project {
   Overview: string;
   Epic: string;
   Development: string;
+  images?: string[]; // Make images optional
 }
 
 interface ProjectsComponentProps {
