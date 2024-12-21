@@ -106,6 +106,7 @@ const AchievementsComponent: React.FC = () => {
                 momentumVelocityRatio: 1,
                 sticky: false,
               }}
+              style={{ height: '320px' }}
               spaceBetween={20}
               slidesPerView={2.2}
               breakpoints={{

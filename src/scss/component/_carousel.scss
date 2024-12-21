@@ -175,11 +175,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        transform: translateY(-4px);
-        
-        .achievement-image {
-          transform: scale(1.05);
-        }
+        // transform: translateY(-4px);
 
         .h-100 {
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -236,4 +232,8 @@
 .swiper-autoheight,
 .swiper-autoheight .swiper-slide {
   height: 100% !important;
+}
+
+.swiper-wrapper {
+  height: 320px !important;
 }

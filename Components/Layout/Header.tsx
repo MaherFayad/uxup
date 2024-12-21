@@ -109,8 +109,6 @@ const Header: React.FC<{
           servicesRef={servicesRef}
           projectsRef={projectsRef}
         />
-
-        {/* Contact Us and AR */}
         <div className="button-parent uxup-fs-paragraph">
           <div
             className={`button ${isScrolled ? 'primary' : ''}`}
@@ -118,9 +116,9 @@ const Header: React.FC<{
           >
             <div className="contact-us">Contact us</div>
           </div>
-          <b className="Nav-Link" id="linkTwoText" onClick={handleARClick}>
+          {/* <b className="Nav-Link" id="linkTwoText" onClick={handleARClick}>
             AR
-          </b>
+          </b> */}
         </div>
       </div>
     </header>
