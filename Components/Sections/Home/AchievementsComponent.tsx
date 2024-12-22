@@ -125,7 +125,7 @@ const AchievementsComponent: React.FC = () => {
                 <SwiperSlide key={index} className="slide">
                   <a 
                     href={achievement.link} 
-                    target="_blank" 
+                    // target="_blank" 
                     rel="noopener noreferrer" 
                     className="achievement-card h-100"
                   >
