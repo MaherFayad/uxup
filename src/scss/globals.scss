@@ -25,6 +25,10 @@
   --foreground: #1F1F1F; // Use the actual color value from $neutral-900
 }
 
+.rounded-6 {
+  border-radius: 2rem;
+}
+
 .p-lg-5{
   padding-top: 4rem;
 }

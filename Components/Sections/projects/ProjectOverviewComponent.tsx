@@ -37,7 +37,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                     <img
                       src={project.images?.[1] || "/projects-img/uxup-p-hero.png"}
                       alt="Project Illustration"
-                      className="img-fluid p-2 rounded-4 w-100"
+                      className="img-fluid p-2 rounded-6 w-100"
                     />
                   </picture>
                 </div>
@@ -46,7 +46,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                     <img
                       src={project.images?.[2] || "/projects-img/uxup-p1.png"}
                       alt="Project Illustration"
-                      className="img-fluid p-2 rounded-4 w-100"
+                      className="img-fluid p-2 rounded-6 w-100"
                     />
                   </picture>
                 </div>
@@ -55,7 +55,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                     <img
                       src={project.images?.[3] || "/projects-img/uxup-p2.png"}
                       alt="Project Illustration"
-                      className="img-fluid p-2 rounded-4 w-100"
+                      className="img-fluid p-2 rounded-6 w-100"
                     />
                   </picture>
                 </div>
@@ -87,7 +87,7 @@ const ProjectOverview: React.FC<ProjectOverviewProps> = ({ project }) => {
                   <img
                     src={project.images?.[4] || "/projects-img/uxup-banner.png"}
                     alt="Project Illustration"
-                    className="img-fluid project p-2 rounded-4 w-100"
+                    className="img-fluid project p-2 rounded-6 w-100"
                   />
                 </picture>
               </div>
