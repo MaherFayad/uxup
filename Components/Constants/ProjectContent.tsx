@@ -16,13 +16,13 @@ export const ProjectContent = [
     <div class="col-12">
       <div class="row g-3 p-4">
         <ul>
-          <li class="my-3 my-md-5">
+          <li>
             <strong>Create a compelling narrative:</strong> Position the app to contribute to personal growth or a larger social cause.
           </li>
-          <li class="my-3 my-md-5">
+          <li>
             <strong>Personal reminders:</strong> Subtly echo the app's vision to align user actions with a grand purpose.
           </li>
-          <li class="my-3 my-md-5">
+          <li>
             <strong>Inclusive language and imagery:</strong> Reinforce the user's role within the app ecosystem.
           </li>
         </ul>
@@ -41,13 +41,13 @@ export const ProjectContent = [
         Focused on user progression, achievements, and goal satisfaction.
       </div>
       <ul>
-        <li class="my-3 my-md-5">
+        <li>
           <strong>Create a compelling narrative:</strong> Encourage users' alignment with a meaningful purpose.
         </li>
-        <li class="my-3 my-md-5">
+        <li>
           <strong>Personal prompts:</strong> Weave reminders into the interface.
         </li>
-        <li class="my-3 my-md-5">
+        <li>
           <strong>Inclusive design:</strong> Enhance user roles and interactions.
         </li>
       </ul>

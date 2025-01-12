@@ -5,6 +5,7 @@ import { FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import ButtonComponent from "./ButtonComponent";
+import Link from 'next/link';
 
 const AchievementsComponent: React.FC = () => {
   const swiperRef = useRef<any>(null); // Create a ref for the Swiper instance
@@ -123,10 +124,8 @@ const AchievementsComponent: React.FC = () => {
             >
               {achievements.map((achievement, index) => (
                 <SwiperSlide key={index} className="slide">
-                  <a 
-                    href={achievement.link} 
-                    // target="_blank" 
-                    rel="noopener noreferrer" 
+                  <Link 
+                    href={achievement.link}
                     className="achievement-card h-100"
                   >
                     <div className="h-100">
@@ -140,7 +139,7 @@ const AchievementsComponent: React.FC = () => {
                         <p>{achievement.description}</p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>
