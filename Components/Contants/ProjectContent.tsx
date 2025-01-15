@@ -111,7 +111,7 @@ export const ProjectContent = [
     slug: "A service to create physical prints of digital NFTs",
     coverImg: "/project/project_3/element.jpg",
     tags: ["Web Platform", "UX/UI Design", "Development"],
-    Overview: "To design a platform that bridges the gap between the digital and physical world...",
+    Overview: "To design a platform that bridges the gap between the digital and physical world.",
     Epic: `
       <div class="uxup-fs-paragraph uxup-color-neutral-200">
         This drive taps into the user’s desire to immortalize their digital art and collectibles, giving them a tangible connection to their NFTs. To leverage this:
