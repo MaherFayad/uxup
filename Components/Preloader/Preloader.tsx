@@ -1,13 +1,19 @@
 // Components/Preloader/Preloader.tsx
 import React, { useRef, useEffect } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Player component with SSR disabled
+const Player = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false }
+);
 
 interface PreloaderProps {
   onAnimationComplete: () => void;
 }
 
 const Preloader: React.FC<PreloaderProps> = ({ onAnimationComplete }) => {
-  const playerRef = useRef<any>(null); // Use 'any' type for playerRef
+  const playerRef = useRef<any>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -16,7 +22,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onAnimationComplete }) => {
 
     setTimeout(() => {
       if (playerRef.current) {
-        playerRef.current.pause(); // No TypeScript error with 'any' type
+        playerRef.current.pause();
       }
     }, 3500);
 

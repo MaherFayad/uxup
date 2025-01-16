@@ -26,37 +26,43 @@ const Footer: React.FC = () => {
                 {/* Social Icons */}
                 <div className="footer-element-socials">
                   <div className="footer-social-icon">
-                    <Image
-                      alt="Instagram"
-                      src="/Social/Ig.svg"
-                      width={24}
-                      height={24}
-                    />
+                    <a href="https://www.instagram.com/uxupsa/" target="_blank" rel="we are more than just a design agency" title="we are more than just a design agency">
+                      <Image
+                        alt="Instagram"
+                        src="/Social/Ig.svg"
+                        width={24}
+                        height={24}
+                      />
+                    </a>
                   </div>
                   <div className="footer-social-icon">
-                    <Image
-                      alt="LinkedIn"
-                      src="/Social/In.svg"
-                      width={24}
-                      height={24}
-                    />
+                    <a href="https://www.linkedin.com/in/uxup" target="_blank" rel="we are more than just a design agency" title="we are more than just a design agency">
+                      <Image
+                        alt="LinkedIn"
+                        src="/Social/In.svg"
+                        width={24}
+                        height={24}
+                      />
+                    </a>
                   </div>
                   <div className="footer-social-icon">
-                    <Image
-                      alt="X"
-                      src="/Social/Xx.svg"
-                      width={24}
-                      height={24}
-                    />
+                    <a href="https://x.com/UXUPSA" target="_blank" rel="we are more than just a design agency" title="we are more than just a design agency">
+                      <Image
+                        alt="X"
+                        src="/Social/Xx.svg"
+                        width={24}
+                        height={24}
+                      />
+                    </a>
                   </div>
-                  <div className="footer-social-icon">
+                  {/* <div className="footer-social-icon">
                     <Image
                       alt="Facebook"
                       src="/Social/Fb.svg"
                       width={24}
                       height={24}
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

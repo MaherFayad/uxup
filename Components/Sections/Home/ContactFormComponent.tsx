@@ -55,8 +55,7 @@ const ContactFormComponent: React.FC = () => {
     setError(false);
   };
 
-  return (
-    <section className="py-5 uxup-color-neutral-100">
+  return ( <section className="py-5 uxup-color-neutral-100">
       <div className="container">
         <div className="row gx-5">
           {/* Contact Information */}
@@ -69,13 +68,13 @@ const ContactFormComponent: React.FC = () => {
               <div className="mb-3">
                 <h5 className="uxup-fs-caption-large uxup-color-text-300">Send us an email</h5>
                 <p className="uxup-fs-paragraph">
-                  <strong>info@UXup.io</strong>
+                  <a href="mailto:contactus@uxup.sa"><strong>contactus@uxup.sa</strong></a>
                 </p>
               </div>
               <div>
-                <h5 className="uxup-fs-caption-large uxup-color-text-300">Give us a call</h5>
+                <h5 className="uxup-fs-caption-large uxup-color- text-300">Give us a call</h5>
                 <p className="uxup-fs-paragraph">
-                  <strong>(000) 666 555 444</strong>
+                  <a href="tel:+966582584737"><strong>+966 582584737</strong></a>
                 </p>
               </div>
             </div>
